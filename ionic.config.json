@@ -1,0 +1,7 @@
+{
+  "name": "crown-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
