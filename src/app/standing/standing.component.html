@@ -1,0 +1,31 @@
+<ion-grid [fixed]="true">
+  <ion-row class="ion-align-items-center ion-justify-content-center">
+    <ion-col>
+      <ion-button
+        shape="round"
+        fill="clear"
+        expand="full"
+        size="small"
+        [disabled]="companyStanding === 0"
+        (click)="movesLeft()">
+        <ion-icon name="arrow-back-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <div class="ion-text-center">
+        <h6>£{{ companyStanding }}</h6>
+      </div>
+    </ion-col>
+    <ion-col>
+      <ion-button
+        shape="round"
+        fill="clear"
+        expand="full"
+        size="small"
+        [disabled]="companyStanding === 16"
+        (click)="movesRight()">
+        <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

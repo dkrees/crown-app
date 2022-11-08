@@ -3,19 +3,75 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title>The Crown</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
+      <ion-title>The Crownii</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div>
+    <!-- <app-standing [companyStanding]="companyStanding" (standingDidChange)="standingChange($event)"></app-standing> -->
+    <app-climate [climate]="climate" (climateDidChange)="climateChange($event)"></app-climate>
+    <app-phase [phase]="phase" (phaseDidChange)="phaseChange($event)"></app-phase>
+
+    <ion-list lines="none">
+      <ng-container *ngFor="let step of crownActions.steps">
+        <ion-item *ngIf="step.heading || step.action || step.description || step.note" [color]="step.actingPlayer ? 'light' : ''">
+          <ion-label class="ion-text-wrap">
+            <ion-text color="dark">
+              <h2 *ngIf="step.heading">{{ step.heading | uppercase }}</h2>
+              <h4 *ngIf="step.action">{{ step.action }}</h4>
+              <p *ngFor="let description of step.description">{{ description }}</p>
+
+              <ion-list *ngIf="step.bullets" lines="full">
+                <ion-item *ngFor="let bullet of step.bullets">
+                  <ion-label class="ion-text-wrap">
+                    <p>{{ bullet }}</p>
+                  </ion-label>
+                </ion-item>
+              </ion-list>
+
+            </ion-text>
+          </ion-label>
+          <ion-note *ngIf="step.note" slot="helper" class="ion-text-wrap">
+            <ion-text><i>{{ step.note }}</i></ion-text>
+          </ion-note>
+        </ion-item>
+
+        <app-promise *ngIf="step.promise" [promise]="step.promise"></app-promise>
+
+        <ion-list *ngIf="step.climate" lines="full">
+          <ng-container *ngFor="let crownClimate of step.climate[climate]">
+            <ion-item *ngIf="crownClimate.description">
+              <ion-label class="ion-text-wrap">
+                <p>{{ crownClimate.description }}</p>
+              </ion-label>
+              <ion-note *ngIf="crownClimate.note" slot="helper" class="ion-text-wrap">
+                <ion-text><i>{{ crownClimate.note }}</i></ion-text>
+              </ion-note>
+            </ion-item>
+            <ion-item *ngIf="crownClimate.numbered?.length">
+              <ion-label>
+                <ol>
+                  <li *ngFor="let item of crownClimate.numbered" class="ion-text-wrap">
+                    <p>{{ item }}</p>
+                  </li>
+                </ol>
+              </ion-label>
+            </ion-item>
+            <app-promise *ngIf="crownClimate.promise" [promise]="crownClimate.promise"></app-promise>
+          </ng-container>
+        </ion-list>
+
+      </ng-container>
+
+    </ion-list>
   </div>
+
+
 </ion-content>

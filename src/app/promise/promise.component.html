@@ -1,0 +1,10 @@
+<ion-item
+  [color]="color">
+  <ion-icon name="cube-outline" slot="start"></ion-icon>
+  <ion-label class="ion-text-wrap">
+    <h2>{{ promise.cost ? '-' : promise.gain ? '+' : '' }}{{ promise.cost || promise.gain }} Promise Cubes</h2>
+    <p> {{ promise.description }}<br>
+      <i *ngIf="promise.note">{{ promise.note }}</i>
+    </p>
+  </ion-label>
+</ion-item>

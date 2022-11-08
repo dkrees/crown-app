@@ -1,0 +1,1860 @@
+{
+  "template": {
+    "steps": [],
+    "climate": {
+      "bull": [],
+      "stag": [],
+      "lion": [],
+      "bear": [],
+      "peacock": []
+    }
+  },
+  "london_season": {
+    "steps": [
+      {
+        "description": ["At the start of this phase (before retirements) you may:"],
+        "promise": {
+          "description": "Take £1 from the Crown family treasury",
+          "cost": 2
+        }
+      },
+      {
+        "heading": "Retirements",
+        "description": [
+          "The Crown will retire pensioners one at a time, each time choosing the highest VP prize spending no more than half (rounded up) of their remaining family treasury. The Crown will only retire to the £2 space if it entitles them to a card from the London Season.",
+          "[HARD/ EXPERT ONLY] During Final Retirement, the Crown will spend as much as possible on pensioners.",
+          "Once the Crown has completed their retirements, you may:"
+        ],
+        "promise": {
+          "description": "Take £1 from the Crown family treasury.",
+          "cost": 1
+        }
+      },
+      {
+        "deregulation": true,
+        "heading": "Special Retirements",
+        "description": ["When Deregulation is in effect, the Crown will take the single highest VP special retirement they can afford."]
+      },
+      {
+        "heading": "Prestige Cards",
+        "description": ["The Crown selects a card from the London Season based on the location of the shaded card at the top of the faceup AI card. If that card not available, they choose the next card to the right, wrapping around to the leftmost card."],
+        "bullets": [
+          "The Crown ignores any text effects on Spouse cards but receives retirement discounts and victory points.",
+          "Any Crown blackmail cards are kept facedown.",
+          "Any enterprise cards are awarded faceup and are effective for the Crown.",
+          "If any card says the Crown “may” do something, they will not.",
+          "If any card requires permission or consent from the Crown, they will not give it."
+        ]
+      },
+      {
+        "promise": {
+          "description": "Take an enterprise prestige card from the Crown.",
+          "cost": 5
+        }
+      },
+      {
+        "promise": {
+          "description": "Take a blackmail card from the Crown.",
+          "note": "You may not peek at blackmail cards held by the Crown.",
+          "cost": 4
+        }
+      }
+    ]
+  },
+  "family": {
+    "steps": [
+      {
+        "heading": "Free Writer Enlistment",
+        "description": ["If there are four or more vacant offices, the Crown will first Enlist Writer as a free action. Then, if there is a Presidential vacancy with no Crown writer, they will use a free action to Enlist Writer in that Presidency."]
+      },
+      {
+        "heading": "Family Actions",
+        "description": [
+          "The Crown always takes two family actions each turn based on the following chart, proceeding left to right. Skip any action that is not viable or cannot be afforded.",
+          "[2P ONLY] The Crown takes one family action each turn."
+        ]
+      },
+      {
+        "heading": "Extra Action",
+        "description": ["If the most recently passed extra action is an action the Crown chooses to take based on the following chart, the Crown will treat that action as an extra action."],
+        "note": "E.g. the Crown may end up taking 3 actions from the following chart in a solo game."
+      },
+      {
+        "description": ["After the Crown has completed their actions from the following chart, they will attempt to take the most recently passed extra action unless they have already done so."],
+        "climate": {
+          "bull": [
+            {"description": "Seek Share"},
+            {"description": "Buy Shipyard"},
+            {"description": "Enlist Writer"},
+            {"description": "Enlist Writer"},
+            {"description": "Enlist Officer"}
+          ],
+          "stag": [
+            {"description": "Seek Share"},
+            {"description": "Enlist Writer"},
+            {"description": "Buy Shipyard"},
+            {"description": "Enlist Writer"},
+            {"description": "Enlist Officer"}
+          ],
+          "lion": [
+            {"description": "Buy Shipyard"},
+            {"description": "Enlist Officer"},
+            {"description": "Enlist Writer"},
+            {"description": "Enlist Officer"}
+          ],
+          "bear": [
+            {"description": "Enlist Officer"},
+            {"description": "Buy Luxury"},
+            {"description": "Buy Workshop"},
+            {"description": "Enlist Officer"},
+            {"description": "Enlist Writer"}
+          ],
+          "peacock": [
+            {"description": "Buy Workshop"},
+            {"description": "Buy Luxury"},
+            {"description": "Enlist Officer"},
+            {"description": "Enlist Officer"},
+            {"description": "Enlist Writer"}
+          ]
+        }
+      },
+      {
+        "description": [
+          "When Seeking Shares, the Crown places on the cheapest space (will take rightmost of the £3 spots if £3 is the cheapest).",
+          "When Enlisting Writers, the Crown always gives priority to:"
+        ],
+        "bullets": [
+          "Vacant Presidencies with no Crown writers.",
+          "Crown Presidencies with the fewest Crown writers.",
+          "Presidencies with the fewest Crown writers.",
+          "Presidency priority on AI card."
+        ]
+      }
+    ]
+  },
+  "firms": {
+    "steps": [
+      {
+        "description": ["The Crown never creates a private firm. They always give consent for dissolution and merging of firms."],
+        "promise": {
+          "description": "If you form a private firm, you must perform this favor (using as many promise cubes as you have if you have less than 3).",
+          "cost": 3,
+          "mandatory": true
+        }
+      },
+      {
+        "heading": "Acquiring Ships"
+      },
+      {
+        "promise": {
+          "description": "Consent to fit a Crown ship.",
+          "cost": 2
+        }
+      },
+      {
+        "promise": {
+          "description": "Consent to buyback a Crown-owned ship from the Company.",
+          "cost": 2
+        }
+      },
+      {
+        "heading": "Investing in a Firm",
+        "description": ["Only once all players have finished investing, the Crown may seek to invest in a firm if the Crown has the majority of Company shares. They will invest using Company shares (unless they are weak), and then workshops. The Crown will never invest if it gives them the majority of shares in that firm."],
+        "climate": {
+          "bull": [
+            {
+              "description": "Will not invest."
+            },
+            {
+              "promise": {
+                "description": "Will invest in your firm for one investment.",
+                "cost": 2
+              }
+            }
+          ],
+          "stag": [
+            {
+              "description": "Will not invest."
+            },
+            {
+              "promise": {
+                "description": "Will invest in your firm for one investment.",
+                "cost": 2
+              }
+            }
+          ],
+          "lion": [
+            {
+              "description": "Will seek one investment in a firm."
+            },
+            {
+              "promise": {
+                "description": "[SOLO ONLY] Deny the Crown's investment. X = value of firm.",
+                "cost": "X"
+              }
+            }
+          ],
+          "bear": [
+            {
+              "description": "Will seek one investment in a firm."
+            },
+            {
+              "promise": {
+                "description": "[SOLO ONLY] Deny the Crown's investment. X = value of firm.",
+                "cost": "X"
+              }
+            }
+          ],
+          "peacock": [
+            {
+              "description": "Will seek one investment in a firm."
+            },
+            {
+              "promise": {
+                "description": "[SOLO ONLY] Deny the Crown's investment. X = value of firm.",
+                "cost": "X"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "description": ["[2P ONLY] The Crown will initiate each investment according to the Player Button, switching after each."],
+        "promise": {
+          "description": "[2P ONLY] The Crown will give consent for a hostile takeover from a player holding the Player Button. X = number of firm shares the Crown holds.",
+          "cost": "X"
+        }
+      }
+    ]
+  },
+  "hiring": {
+    "steps": [
+      {
+        "description": ["Once the New Company Shares step is complete (and not before), you may:"],
+        "promise": {
+          "description": "Give £1 from your family treasury to the Crown if the Crown has a majority of Company shares.",
+          "gain": 1
+        }
+      },
+      {
+        "climate": {
+          "bull": [
+            {
+              "promise": {
+                "description": "Take a share from the Crown.",
+                "cost": 6}
+            },
+            {
+              "promise": {
+                "description": "Give a share to the Crown.",
+                "gain": 2}
+            }
+          ],
+          "stag": [
+            {
+              "promise": {
+                "description": "Take a share from the Crown.",
+              "cost": 4}
+            },
+            {
+              "promise": {
+                "description": "Give a share to the Crown.",
+              "cost": 3}
+            }
+          ],
+          "lion": [
+            {
+              "promise": {
+                "description": "Take a share from the Crown.",
+              "cost": 4}
+            },
+            {
+              "promise": {
+                "description": "Give a share to the Crown.",
+              "cost": 3}
+            }
+          ],
+          "bear": [
+            {
+              "promise": {
+                "description": "Take a share from the Crown.",
+              "cost": -3}
+            },
+            {
+              "promise": {
+                "description": "Give a share to the Crown.",
+              "cost": 4}
+            }
+          ],
+          "peacock": [
+            {
+              "promise": {
+                "description": "Take a share from the Crown.",
+              "cost": 3}
+            },
+            {
+              "promise": {
+                "description": "Give a share to the Crown.",
+              "cost": 4}
+            }
+          ]
+        }
+      },
+      {
+        "heading": "Chairman Election",
+        "description": ["If the Crown has majority of shares (or an equality and is former Chairman), they will elect themselves as the new Chairman."],
+        "promise": {
+          "description": "If the Crown has majority (or an equality and is former Chairman), a player may bribe the Crown to elect them as Chairman. Under Deregulation this becomes -12.",
+        "cost": 3}
+      },
+      {
+        "promise": {
+          "description": "[2P ONLY] If the Crown does not have a majority, any player can persuade the Crown to support their election. X = number of supporting Crown shares.",
+        "cost": "X"}
+      },
+      {
+        "promise": {
+          "description": "A player with majority (or an equality and is former Chairman) votes to elect the Crown as Chairman. Under Deregulation this becomes +6.",
+          "gain": 3}
+      },
+      {
+        "heading": "When You Are Hiring",
+        "actingPlayer": true
+      },
+      {
+        "promise": {
+          "description": "Consent for Nepotism.",
+        "cost": 2}
+      },
+      {
+        "promise": {
+          "description": "Hire a Crown family member over any non-Crown family member.",
+          "gain": 1
+        }
+      },
+      {
+        "heading": "When the Crown is Hiring",
+        "description": ["The Crown always hires their own family if able."]
+      },
+      {
+        "promise": {
+          "description": "[SOLO ONLY] You must give consent for nepotism to the Crown when required if they have 2 or more promises. Otherwise, consent is optional.",
+          "gain": 2,
+        "mandatory": true}
+      },
+      {
+        "promise": {
+          "description": "[2P ONLY] When both players are candidates, each player may perform this favor if they give consent unanimously.",
+          "gain": 1
+        }
+      },
+      {
+        "description": [
+          "Director of Trade/Governor General Selection: The Crown hires the first eligible officeholder, clockwise or counterclockwise as indicated by the AI card, along the Company Operation ribbon starting at Chairman.",
+          "Candidate Priority: The Crown will consider candidates with priority to writers, officers, and then Governors. Use AI card to break ties between candidates."
+        ]
+      },
+      {
+        "promise": {
+          "description": "Make a hiring decision for the Crown.",
+        "cost": 3}
+      }
+    ]
+  },
+  "chairman": {
+    "steps": [
+      {
+        "actingPlayer": true,
+        "heading": "If You Are Chairman",
+        "promise": {
+          "description": "You must always perform this favor if able.",
+        "cost": 1,
+        "mandatory": true}
+      },
+      {
+        "actingPlayer": true,
+        "action": "Seek Debt",
+        "climate": {
+          "bull": [
+            {
+              "promise": {
+                "description": "Consent from Crown shares for the first additional advancement above 3 Debt Marker advances.",
+              "cost": 1
+            }
+            },
+            {
+              "promise": {
+                "description": "Consent from a Crown share for any additional Debt Marker advances.",
+              "cost": 1
+            }
+            }
+          ],
+          "stag": [
+            {
+              "promise": {
+                "description": "Consent from Crown shares for the first additional advancement above 3 Debt Marker advances.",
+              "cost": 2}
+            },
+            {
+              "promise": {
+                "description": "Consent from a Crown share for any additional Debt Marker advances.",
+              "cost": 1
+            }
+            }
+          ],
+          "lion": [
+            {
+              "promise": {
+                "description": "Consent from Crown shares for the first additional advancement above 3 Debt Marker advances.",
+              "cost": 3}
+            },
+            {
+              "promise": {
+                "description": "Consent from a Crown share for any additional Debt Marker advances.",
+              "cost": 1
+            }
+            }
+          ],
+          "bear": [
+            {
+              "promise": {
+                "description": "Consent from Crown shares for the first additional advancement above 3 Debt Marker advances.",
+              "cost": 4}
+            },
+            {
+              "promise": {
+                "description": "Consent from a Crown share for any additional Debt Marker advances.",
+              "cost": 1
+            }
+            }
+          ],
+          "peacock": [
+            {
+              "promise": {
+                "description": "Consent from Crown shares for the first additional advancement above 3 Debt Marker advances.",
+                "cost": 6}
+            },
+            {
+              "promise": {
+                "description": "Consent from a Crown share for any additional Debt Marker advances.",
+                "cost": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "actingPlayer": true,
+        "action": "Allocate Company Balance",
+        "climate": {
+          "bull": [
+            {
+              "promise": {
+                "description": "Allocate £3 to a Crown office.",
+                "gain": 1
+              }
+            }
+          ],
+          "stag": [
+            {
+              "promise": {
+                "description": "Allocate £4 to a Crown office.",
+                "gain": 1
+              }
+            }
+          ],
+          "lion": [
+            {
+              "promise": {
+                "description": "Allocate £4 to a Crown office.",
+                "gain": 1
+              }
+            }
+          ],
+          "bear": [
+            {
+              "promise": {
+                "description": "Allocate £4 to a Crown office.",
+                "gain": 1
+              }
+            }
+          ],
+          "peacock": [
+            {
+              "promise": {
+                "description": "Allocate £5 to a Crown office.",
+                "gain": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "actingPlayer": true,
+        "action": "Set Climate",
+        "description": ["After you have finished acting, flip a new AI card and set the climate on the Crown family board."]
+      },
+      {
+        "heading": "If the Crown is Chairman",
+        "action": "Set Climate",
+        "description": ["Before the Crown acts, flip a new AI card and set the climate on the Crown family board."]
+      },
+      {
+        "action": "Seek Debt",
+        "description": ["Advance Debt marker for each..."],
+        "climate": {
+          "bull": [
+            {
+              "description": "...Presidency with an open home port."
+            },
+            {
+              "promise": {
+                "description": "Request an additional Company Debt advancement.",
+                "cost": 1
+              }
+            },
+            {
+              "promise": {
+                "description": "Request one less Company Debt advancement.",
+                "cost": 2}
+            }
+          ],
+          "stag": [
+            {
+              "description": "...Presidency with an open home port."
+            },
+            {
+              "promise": {
+                "description": "Request an additional Company Debt advancement.",
+                "cost": 1
+              }
+            },
+            {
+              "promise": {
+                "description": "Request one less Company Debt advancement.",
+                "cost": 2}
+            }
+          ],
+          "lion": [
+            {
+              "description": "...sea zone with less than 2 ships."
+            },
+            {
+              "promise": {
+                "description": "Request an additional Company Debt advancement.",
+                "cost": 2}
+            },
+            {
+              "promise": {
+                "description": "Request one less Company Debt advancement.",
+                "cost": 2}
+            }
+          ],
+          "bear": [
+            {
+              "description": "...Presidency where the Crown is Commander or has majority of total Army box pieces."
+            },
+            {
+              "promise": {
+                "description": "Request an additional Company Debt advancement.",
+                "cost": 2}
+            },
+            {
+              "promise": {
+                "description": "Request one less Company Debt advancement.",
+                "cost": 1
+              }
+            }
+          ],
+          "peacock": [
+            {
+              "description": "Do not advance Debt marker."
+            },
+            {
+              "promise": {
+                "description": "Request an additional Company Debt advancement.",
+                "cost": 3}
+            }
+          ]
+        }
+      },
+      {
+        "action": "Allocate Company Balance",
+        "description": ["Allocate funds in priority order. Give as much as possible to any step that cannot be performed in full."],
+        "promise": {
+          "description": "At any point before each step, request that £3 (or less) be allocated to a specific office.",
+            "cost": 1
+        },
+        "climate": {
+          "bull": [
+            {
+              "numbered": [
+                "£4 to each Presidency with an open home port.",
+                "£5 to Director of Trade / Governor General."
+              ]
+            }
+          ],
+          "stag": [
+            {
+              "numbered": [
+                "£4 to each Crown Presidency with an open home port.",
+                "£1 to each Presidency with a Crown writer.",
+                "£3 to Director of Trade / Governor General."
+              ]
+            }
+          ],
+          "lion": [
+            {
+              "numbered": [
+                "£5 to Shipping for each Presidency with a sea zone with less than 2 ships.",
+                "£4 to the Crown Presidency with most ships.",
+                "£3 to Director of Trade / Governor General.",
+                "£1 to each Presidency with a Crown writer."
+              ]
+            }
+          ],
+          "bear": [
+            {
+              "numbered": [
+                "£4 to each Presidency where Crown has a majority of pieces in the Army box.",
+                "£2 to each Presidency with a Crown Governor.",
+                "£4 to Crown Governor General.",
+                "£2 to each Presidency with a Crown writer."
+              ]
+            }
+          ],
+          "peacock": [
+            {
+              "numbered": [
+                "£5 to each Presidency where Crown is Commander or has majority of officers.",
+                "£2 to each Presidency with a Crown Governor.",
+                "£5 to Crown Governor General."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "description": ["If there is a remainder, allocate remaining funds to the Manager of Shipping."]
+      }
+    ]
+  },
+  "director_of_trade": {
+    "steps": [
+      {
+        "actingPlayer": true,
+        "heading": "If you are the Director of Trade",
+        "action": "Special Envoy",
+        "description": ["If you open trade with China use the same rules as hiring to hire a new office."],
+        "climate": {
+          "bull": [
+            {
+              "promise": {
+                "description": "Open an order in the home region of a Crown Presidency that has at least one Crown writer.",
+                "gain": 1
+              }
+            },
+            {
+              "promise": {
+                "description": "After the office has acted, no Presidency has 2 or more ships or writers than any other Presidency.",
+                "gain": 1
+              }
+            }
+          ],
+          "stag": [
+            {
+              "promise": {
+                "description": "Open an order in the home region of a Crown Presidency that has at least one Crown writer.",
+                "gain": 1
+              }
+            },
+            {
+              "promise": {
+                "description": "After the office has acted, no Presidency has 2 or more ships or writers than any other Presidency.",
+                "gain": 1
+              }
+            }
+          ],
+          "lion": [
+            {
+              "promise": {
+                "description": "Open an order in the home region of a Crown Presidency that has at least one Crown writer.",
+                "gain": 1
+              }
+            },
+            {
+              "promise": {
+                "description": "After the office has acted, no Presidency has 2 or more ships or writers than any other Presidency.",
+                "gain": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "heading": "If the Crown is Director of Trade",
+        "action": "Special Envoy",
+        "description": ["The Crown will take this action using exactly £3 of available funds with priority going to the northernmost closed order in the first priority region, given by the current AI card, not controlled by the Company. They will skip if £3 is not available, and repeat as long as there is £3+ available."],
+        "climate": {
+          "bull": [
+            {
+              "promise": {
+                "description": "Force the Crown to spend more or less money (any amount, including zero, and optionally skip additional Special Envoy actions).",
+                "cost": 2}
+            }
+          ],
+          "stag": [
+            {
+              "promise": {
+                "description": "Force the Crown to spend more or less money (any amount, including zero, and optionally skip additional Special Envoy actions).",
+                "cost": 2}
+            }
+          ],
+          "lion": [
+            {
+              "promise": {
+                "description": "Force the Crown to spend more or less money (any amount, including zero, and optionally skip additional Special Envoy actions).",
+                "cost": 1
+              }
+            }
+          ],
+          "bear": [
+            {
+              "promise": {
+                "description": "Force the Crown to spend more or less money (any amount, including zero, and optionally skip additional Special Envoy actions).",
+                "cost": 1
+              }
+            }
+          ],
+          "peacock": [
+            {
+              "promise": {
+                "description": "Force the Crown to spend more or less money (any amount, including zero, and optionally skip additional Special Envoy actions).",
+                "cost": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "promise": {
+          "description": "Target a specific order.",
+          "cost": 1
+        }
+      },
+      {
+        "promise": {
+          "description": "Open trade with China.",
+          "cost": 3}
+      },
+      {
+        "action": "Transfers",
+        "description": [
+          "The Crown will make 2 transfers from the priority list.",
+          "If there is more than one viable Presidency to transfer from/to, use AI card's arrows to break ties, determining the location in which the transfer occurs from first.",
+          "If there is more than one viable ship to transfer, use Company ships, then non-fatigued ships, then Crown ships, then player ships."
+        ],
+        "note": "E.g. If all three Presidencies are candidates to be transferred from, and all contain 2 ships, then the Presidency with the fewest ships would be the one pointed at by the black arrow on the AI card. If the two ships eligible for transfer are a player ship and a fatigued Crown ship, the Crown would transfer the player ship."
+      },
+      {
+        "promise": {
+          "description": "Prevent a transfer (counts as one of two available to the Crown).",
+          "cost": 1
+        }
+      },
+      {
+        "promise": {
+          "description": "Transfer 1 writer/ship to a Presidency/sea zone of player's choice (counts as one of two available to the Crown).",
+        "note": "Players may not undo a previous transfer.",
+          "cost": 2}
+      },
+      {
+        "action": "Transfer Priority List",
+        "description": ["Skip any that cannot be performed, and stop once 2 transfers have been performed or the bottom of the list has been reached."],
+        "climate": {
+          "bull": [
+            {
+              "numbered": [
+                "A Crown writer from Presidency with shortest trade route to Presidency with longest.",
+                "A ship from Presidency with shortest trade route to Presidency with longest.",
+                "A player writer from Presidency with longest trade route to Presidency with shortest."
+              ]
+            }
+          ],
+          "stag": [
+            {
+              "numbered": [
+                "A ship from Presidency with shortest trade route to Presidency with longest.",
+                "A Crown writer from Presidency with fewest ships to Presidency with most ships.",
+                "A player writer from Presidency with longest trade route to Presidency with shortest."
+              ]
+            }
+          ],
+          "lion": [
+            {
+              "numbered": [
+                "A ship from Presidency with fewest Crown writers to Presidency with most Crown writers.",
+                "A Crown writer from Presidency with fewest ships to Presidency with most.",
+                "A ship from Presidency with fewest Crown writers to China.",
+                "A ship from Presidency with most player writers to Presidency with the fewest player writers."
+              ]
+            }
+          ],
+          "bear": [
+            {
+              "numbered": [
+                "A ship from player Presidency to Crown Presidency.",
+                "A Crown writer from Presidency with fewest ships to Presidency with most.",
+                "A Crown writer from player Presidency to Crown Presidency."
+              ]
+            }
+          ],
+          "peacock": [
+            {
+              "numbered": [
+                "A Crown writer from player Presidency to Crown Presidency.",
+                "A ship from Presidency with fewest Crown writers to Presidency with most Crown writers.",
+                "A ship from Presidency with fewest Crown writers to Presidency with most Crown writers.",
+                "A player writer from player Presidency to Crown Presidency."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "actingPlayer": true,
+        "heading": "If you are Governor General"
+      },
+      {
+        "promise": {
+          "description": "Add money to a Crown office's treasury.",
+          "gain": 1
+        }
+      },
+      {
+        "promise": {
+          "description": "Place a regiment into an Army associated with a Crown Presidency.",
+          "gain": 1
+        }
+      },
+      {
+        "promise": {
+          "description": "Place a Company ship into a sea zone associated with a Crown Presidency.",
+          "gain": 1
+        }
+      },
+      {
+        "heading": "If the Crown is Governor General"
+      },
+      {
+        "action": "Govern",
+        "description": [
+          "The Crown will perform the Govern action as long as they roll the required number of dice:"
+        ]
+      },
+      {
+        "climate": {
+          "bull": [
+            {
+              "description": "5 dice"
+            }
+          ],
+          "stag": [
+            {
+              "description": "3 dice"
+            }
+          ],
+          "lion": [
+            {
+              "description": "3 dice"
+            }
+          ],
+          "bear": [
+            {
+              "description": "3 dice"
+            }
+          ],
+          "peacock": [
+            {
+              "description": "2 dice"
+            }
+          ]
+        }
+      },
+      {
+        "promise": {
+          "description": "Increase or decrease the required number of dice by 1.",
+          "cost": 1
+        }
+      },
+      {
+        "description":
+        ["If the Govern action is successful the Crown will:"],
+        "climate": {
+          "bull": [
+            {"description": "Tax (adding funds evenly among Crown Presidencies, then remainder to Company Balance)."}
+          ],
+          "stag": [
+            {"description": "Tax (adding funds evenly among Crown Presidencies, then remainder to Company Balance)."}
+          ],
+          "lion": [
+            {"description": "Build Company Ship."}
+          ],
+          "bear": [
+            {"description": "Commission Regiment."}
+          ],
+          "peacock": [
+            {"description": "Commission Regiment."}
+          ]
+        }
+      },
+      {
+        "promise": {
+          "description": "Choose a different result for a successful Govern action.",
+          "cost": 2}
+      }
+    ]
+  },
+  "manager_of_shipping": {
+    "steps": [
+      {
+        "actingPlayer": true,
+        "heading": "If you are the Manager of Shipping"
+      },
+      {
+        "promise": {
+          "description": "Fit a Crown ship.",
+          "gain": 1
+        }
+      },
+      {
+        "promise": {
+          "description": "Place a ship in a Crown Presidency or Crown Superintendent of China.",
+          "gain": 1
+        }
+      },
+      {
+        "heading": "If the Crown is Manager of Shipping",
+        "action": "Fitting Ships",
+        "description": ["The Crown will fit as many of their ships as possible, then player ships (use Player Button to break ties.)"],
+        "promise": {
+          "description": "Fit a specific ship",
+          "cost": 1
+        }
+      },
+      {
+        "action": "Buying Company Ships",
+        "climate": {
+          "bull": [
+            {
+              "description": "Will not buy Company ships.",
+              "promise": {
+                "description": "Buys a Company ship.",
+                "cost": 1
+              }
+            },
+            {
+              "promise": {
+                "description": "The Crown buys another Company ship.",
+                "cost": 1
+              }
+            }
+          ],
+          "stag": [
+            {
+              "description": "Will buy 1 Company ship if able.",
+              "promise": {
+                "description": "Does not buy a Company ship.",
+                "cost": 2}
+            },
+            {
+              "promise": {
+                "description": "The Crown buys another Company ship.",
+                "cost": 1
+              }
+            }
+          ],
+          "lion": [
+            {
+              "description": "Will buy as many Company ships as able.",
+              "promise": {
+                "description": "Buys as many Company ships as you wish.",
+                "cost": 3}
+            }
+          ],
+          "bear": [
+            {
+              "description": "Will buy 1 Company ship if able.",
+              "promise": {
+                "description": "Does not buy a Company ship.",
+                "cost": 1
+              }
+            },
+            {
+              "promise": {
+                "description": "The Crown buys another Company ship.",
+                "cost": 2}
+            }
+          ],
+          "peacock": [
+            {
+              "description": "Will not buy Company ships.",
+              "promise": {
+                "description": "Buys a Company ship.",
+                "cost": 2}
+            },
+            {
+              "promise": {
+                "description": "The Crown buys another Company ship.",
+                "cost": 2}
+            }
+          ]
+        }
+      },
+      {
+        "action": "Leasing Extra Ships",
+        "description": ["The Crown will spend all money left in Shipping on extra ships."],
+        "promise": {
+          "description": "The Crown must leave £2 unspent.",
+          "cost": 1
+        }
+      },
+      {
+        "action": "Placing Ships",
+        "description": ["The Crown will place all ships they have fitted, bought, and/or leased this turn..."],
+        "climate": {
+          "bull": [
+            {
+              "description": "...in the Presidency's sea zone with the longest open trade route, with priority going to a Crown Presidency.",
+              "note": "Here, the highest number may be zero."
+            }
+          ],
+          "stag": [
+            {
+              "description": "...in the Presidency's sea zone with longest open trade route, with priority going to Presidency with more Crown writers.",
+              "note": "Here, the highest number may be zero."
+            }
+          ],
+          "lion": [
+            {
+              "description": "...in a Crown Presidency's sea zone. If none, Presidency with the highest number of writers.",
+              "note": "Here, the highest number may be zero."
+            }
+          ],
+          "bear": [
+            {
+              "description": "...in the Presidency's sea zone with the highest number of Crown writers.",
+              "note": "Here, the highest number may be zero."
+            }
+          ],
+          "peacock": [
+            {
+              "description": "...in China, if possible; otherwise, in the Presidency's sea zone with highest number of Crown writers.",
+              "note": "Here, the highest number may be zero."
+            }
+          ]
+        }
+      },
+      {
+        "promise": {
+          "description": "The Crown fits one ship into sea zone (or China) of your choice.",
+          "cost": 1
+        }
+      }
+    ]
+  },
+  "military_affairs": {
+    "steps": [
+      {
+        "actingPlayer": true,
+        "heading": "If you are Military Affairs",
+        "promise": {
+          "description": "Assign the Crown as Commander of an Army when able. This always applies, even if you have no choice but to assign the Crown as Commander.",
+          "gain": 1,
+          "mandatory": true}
+      },
+      {
+        "heading": "If the Crown is Military Affairs",
+        "action": "Transfers",
+        "description": ["The Crown will attempt to perform two army transfers. Otherwise, the Crown will transfer according to the Transfer Priority below, skipping any transfer that cannot be completed and any transfer that undoes a previous transfer from this turn."]
+      },
+      {
+        "action": "Transfer Priority",
+        "description": ["The Crown will transfer regiments, then Crown officers, then player officers using the following priority."],
+        "climate": {
+          "bull": [
+            {"description": "Player Presidency's Army to a Crown Presidency's Army."}
+          ],
+          "stag": [
+            {"description": "Player Presidency's Army to a Crown Presidency's Army."}
+          ],
+          "lion": [
+            {"description": "Army of Presidency with fewest ships to Army of Presidency with most ships."}
+          ],
+          "bear": [
+            {"description": "Army where a player is Commander to an Army where the Crown is Commander."}
+          ],
+          "peacock": [
+            {"description": "Army where a player is Commander to an Army where the Crown is Commander."}
+          ]
+        }
+      },
+      {
+        "note": "Note: If there is more than one viable Army to transfer from/to, use AI card's arrows to break ties."
+      },
+      {
+        "promise": {
+          "description": "Transfer 1 officer or regiment from a Presidency to another Presidency (counts as one of the Crown's two transfers).",
+          "cost": 1
+        }
+      },
+      {
+        "promise": {
+          "description": "Prevent any transfer from happening this round (counts as one of the Crown's two transfers).",
+          "cost": 1
+        }
+      },
+      {
+        "action": "Assign Officers",
+        "description": ["The Crown will assign player officers first and then Crown officers, one at a time and independently of each other, according to the following priority (starting at the top for each assignment and breaking ties by applying each step that can be applied to reduce the candidates to a single one). If a tie remains after applying each step in the list, break the tie with the black arrow, then the white arrow."],
+        "climate": {
+          "bull": [
+            {
+              "numbered": [
+                "A Crown Presidency, then",
+                "The Presidency with the most ships, then",
+                "A Presidency where Crown is Governor, then",
+                "A Presidency that creates a new Crown majority of pieces, then",
+                "A Presidency that creates a Crown equality with a player holding a majority of pieces, then",
+                "A Presidency where Crown has a majority of pieces and does not lose a Crown majority, then",
+                "A Presidency where the Crown is Commander."
+              ]
+            }
+          ],
+          "stag": [
+            {
+              "numbered": [
+                "A Crown Presidency, then",
+                "The Presidency with the most ships, then",
+                "A Presidency where Crown is Governor, then",
+                "A Presidency that creates a new Crown majority of pieces, then",
+                "A Presidency that creates a Crown equality with a player holding a majority of pieces, then",
+                "A Presidency where Crown has a majority of pieces and does not lose a Crown majority, then",
+                "A Presidency where the Crown is Commander."
+              ]
+            }
+          ],
+          "lion": [
+            {
+              "numbered": [
+                "A Crown Presidency, then",
+                "The Presidency with the most ships, then",
+                "A Presidency where Crown is Governor, then",
+                "A Presidency that creates a new Crown majority of pieces, then",
+                "A Presidency that creates a Crown equality with a player holding a majority of pieces, then",
+                "A Presidency where Crown has a majority of pieces and does not lose a Crown majority, then",
+                "A Presidency where the Crown is Commander."
+              ]
+            }
+          ],
+          "bear": [
+            {
+              "numbered": [
+                "A Presidency that creates a new Crown majority, then",
+                "A Presidency that creates a Crown equality with a player holding a majority of pieces, then",
+                "A Presidency where Crown has a majority of pieces and does not lose a Crown majority, then",
+                "A Presidency where Crown is Governor, then",
+                "A Presidency where Crown is Commander, then",
+                "A Crown Presidency, then",
+                "The Presidency with the most ships."
+              ]
+            }
+          ],
+          "peacock": [
+            {
+              "numbered": [
+                "A Presidency that creates a new Crown majority, then",
+                "A Presidency that creates a Crown equality with a player holding a majority of pieces, then",
+                "A Presidency where Crown has a majority of pieces and does not lose a Crown majority, then",
+                "A Presidency where Crown is Governor, then",
+                "A Presidency where Crown is Commander, then",
+                "A Crown Presidency, then",
+                "The Presidency with the most ships."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "promise": {
+          "description": "Assign 1 officer to a Presidency of your choice.",
+          "cost": 1
+        }
+      },
+      {
+        "description": ["After all Officers-in-Training have been assigned, the Crown will assign Commanders. If there is more than one eligible officer to become a Commander, Crown will chose their own officer."]
+      }
+    ]
+  },
+  "presidency_operations": {
+    "steps": [
+      {
+        "heading": "If the Crown is President",
+        "description": ["Crown Presidents make Governors act first in order of formation, then Commander, then attempt Trade."],
+        "promise": {
+          "description": "Make a single change in the order of Presidency operations.",
+          "cost": 1
+        }
+      }
+    ]
+  },
+  "governors": {
+    "steps": [
+      {
+        "actingPlayer": true,
+        "heading": "If you are Governor"
+      },
+      {
+        "actingPlayer": true,
+        "promise": {
+          "description": "Add money from a Tax Administer action to a Crown Presidency.",
+          "gain": 1,
+          "note": "This can only be taken once per turn per Presidency."
+        }
+      },
+      {
+        "actingPlayer": true,
+        "promise": {
+          "description": "Move a Company ship into the sea zone associated with a Crown Presidency.",
+          "gain": 1
+        }
+      },
+      {
+        "actingPlayer": true,
+        "promise": {
+          "description": "Commission Regiment into an Army associated with a Crown Presidency.",
+          "gain": 1,
+          "note": "This can only be taken once per turn per Presidency."
+        }
+      },
+      {
+        "heading": "If the Crown is Governor",
+        "action": "Administer",
+        "description": ["Crown will repeat the Administer action as many times as possible, decreasing the dice pool after each roll, as long as they can roll at least the required number of dice given by this table:"],
+        "climate": {
+          "bull": [
+            {"description": "3 dice"}
+          ],
+          "stag": [
+            {"description": "2 dice"}
+          ],
+          "lion": [
+            {"description": "2 dice"}
+          ],
+          "bear": [
+            {"description": "2 dice"}
+          ],
+          "peacock": [
+            {"description": "1 die"}
+          ]
+        }
+      },
+      {
+        "promise": {
+          "description": "Increase or decrease the required number of die by 1.",
+          "cost": 1
+        }
+      },
+      {
+        "promise": {
+          "description": "Take no Administer actions.",
+          "cost": 3
+        }
+      },
+      {
+        "description": ["If the Administer action is successful the Crown will:"],
+        "climate": {
+          "bull": [
+            {"description": "Tax (adding funds to Crown Presidency first, then remainder to Company Balance)."}
+          ],
+          "stag": [
+            {"description": "Tax (adding funds to Crown Presidency first, then remainder to Company Balance)."}
+          ],
+          "lion": [
+            {"description": "Build Company Ship."}
+          ],
+          "bear": [
+            {"description": "Commission Regiment."}
+          ],
+          "peacock": [
+            {"description": "Commission Regiment."}
+          ]
+        }
+      },
+      {
+        "promise": {
+          "description": "Choose a different result for a successful Administer action.",
+          "cost": 2
+        }
+      }
+    ]
+  },
+  "commanders": {
+    "steps": [
+      {
+        "actingPlayer": true,
+        "heading": "If you are the Commander",
+        "action": "Local Alliances",
+        "climate": {
+          "bull": [
+            {
+              "promise": {
+                "description": "Consent to purchase a Local Alliance from a Crown President.",
+                "cost": 2
+              }
+            }
+          ],
+          "stag": [
+            {
+              "promise": {
+                "description": "Consent to purchase a Local Alliance from a Crown President.",
+                "cost": 2
+              }
+            }
+          ],
+          "lion": [
+            {
+              "promise": {
+                "description": "Consent to purchase a Local Alliance from a Crown President.",
+                "cost": 1
+              }
+            }
+          ],
+          "bear": [
+            {
+              "promise": {
+                "description": "Consent to purchase a Local Alliance from a Crown President.",
+                "cost": "0"
+              }
+            }
+          ],
+          "peacock": [
+            {
+              "promise": {
+                "description": "Consent to purchase a Local Alliance from a Crown President.",
+                "cost": "0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "actingPlayer": true,
+        "action": "Deploy",
+        "climate": {
+          "bull": [
+            {
+              "promise": {
+                "description": "Successfully complete a Deploy action in a Company-controlled region associated with a Crown Presidency that has at least one Crown writer.",
+                "gain": 1
+              }
+            }
+          ],
+          "stag": [
+            {
+              "promise": {
+                "description": "Successfully complete a Deploy action in a Company-controlled region associated with a Crown Presidency that has at least one Crown writer.",
+                "gain": 1
+              }
+            }
+          ],
+          "lion": [
+            {
+              "promise": {
+                "description": "Successfully complete a Deploy action in a non-Company region using one or more Crown officers.",
+                "gain": 1
+              }
+            },
+            {
+              "promise": {
+                "description": "Successfully complete a Deploy action in a Company-controlled region associated with a Crown Presidency that has at least one Crown writer.",
+                "gain": 1
+              }
+            }
+          ],
+          "bear": [
+            {
+              "promise": {
+                "description": "Successfully complete a Deploy action in a non-Company region using one or more Crown officers.",
+                "gain": 1
+              }
+            }
+          ],
+          "peacock": [
+            {
+              "promise": {
+                "description": "Successfully complete a Deploy action in a non-Company region using one or more Crown officers.",
+                "gain": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "heading": "If the Crown is Commander",
+        "action": "Local Alliances",
+        "description": ["Crown Presidents will always give consent to purchasing Local Alliances to Crown Commanders."],
+        "climate": {
+          "bull": [
+            {"description": "Will not purchase a Local Alliance."},
+            {"promise": {
+              "description": "Will purchase an additional Local Alliance of your choice, and you must give consent to the Crown if they purchase Local Alliances in your Presidency.",
+              "cost": 2
+            }}
+          ],
+          "stag": [
+            {"description": "Will not purchase a Local Alliance."},
+            {"promise": {
+              "description": "Will purchase an additional Local Alliance of your choice, and you must give consent to the Crown if they purchase Local Alliances in your Presidency.",
+              "cost": 2
+            }}
+          ],
+          "lion": [
+            {"description": "If the Crown's Army strength is 3+ they will attempt to purchase the cheapest affordable Local Alliance (requires presidential consent)."},
+            {"promise": {
+              "description": "Will purchase an additional Local Alliance of your choice, and you must give consent to the Crown if they purchase Local Alliances in your Presidency.",
+              "cost": 2
+            }},
+            {"promise": {
+              "description": "The Crown must purchase a more expensive Local Alliance.",
+              "cost": 1
+            }},
+            {"promise": {
+              "description": "If the Crown has the Presidency, the Crown will not purchase a Local Alliance.",
+              "cost": 1
+            }}
+          ],
+          "bear": [
+            {"description": "If the Crown's Army strength is 2+ they will attempt to purchase the most expensive affordable Local Alliance (requires presidential consent)."},
+            {"promise": {
+              "description": "Will purchase an additional Local Alliance of your choice, and you must give consent to the Crown if they purchase Local Alliances in your Presidency.",
+              "cost": 1
+            }},
+            {"promise": {
+              "description": "The Crown must purchase a less expensive Local Alliance.",
+              "cost": 1
+            }},
+            {"promise": {
+              "description": "If the Crown has the Presidency, the Crown will not purchase a Local Alliance.",
+              "cost": 2
+            }}
+          ],
+          "peacock": [
+            {"description": "If the Crown's Army strength is 2+ they will attempt to purchase the most expensive affordable Local Alliance (requires presidential consent)."},
+            {"promise": {
+              "description": "Will purchase an additional Local Alliance of your choice, and you must give consent to the Crown if they purchase Local Alliances in your Presidency.",
+              "cost": 1
+            }},
+            {"promise": {
+              "description": "The Crown must purchase a less expensive Local Alliance.",
+              "cost": 1
+            }},
+            {"promise": {
+              "description": "If the Crown has the Presidency, the Crown will not purchase a Local Alliance.",
+              "cost": 2
+            }}
+          ]
+        }
+      },
+      {
+        "promise": {
+          "description": "Give consent to the Crown purchasing Local Alliances in your Presidency if you did not pay promises to make them purchase Local Alliances.",
+          "gain": 1
+        }
+      },
+      {
+        "action": "Deploy Target Regions",
+        "description": ["The Crown will attempt to take the Deploy action in a..."],
+        "climate": {
+          "bull": [
+            {"description": "...Presidency's home region with closed orders, then Company-controlled regions associated with this Presidency with closed orders, then Presidency's home region if not Company- controlled, then any non-Company-controlled regions adjacent to Company-controlled Regions."}
+          ],
+          "stag": [
+            {"description": "...Presidency's home region with closed orders, then Company-controlled regions associated with this Presidency with closed orders, then Presidency's home region if not Company- controlled, then any non-Company-controlled regions adjacent to Company-controlled Regions."}
+          ],
+          "lion": [
+            {"description": "...Presidency's home region if not Company-controlled, then any regions not Company-controlled and adjacent to Company-controlled Regions associated with this Presidency, then Company-controlled regions associated with this Presidency with closed orders."}
+          ],
+          "bear": [
+            {"description": "...Presidency's home region if not Company-controlled, then any regions not Company-controlled and adjacent to Company-controlled Regions associated with this Presidency, then Company-controlled regions associated with this Presidency with closed orders."}
+          ],
+          "peacock": [
+            {"description": "...Presidency's home region if not Company-controlled, then any regions not Company-controlled and adjacent to Company-controlled Regions associated with this Presidency, then Company-controlled regions associated with this Presidency with closed orders."}
+          ]
+        }
+      },
+      {
+        "promise": {
+          "description": "Choose a valid region in which the Crown will attempt to Deploy.",
+          "cost": 2
+        }
+      },
+      {
+        "action": "Deploy",
+        "description": ["A Crown Commander will exhaust all available Local Alliances first, then Crown officers, then player officers, and then regiments, in order to match the exact number of dice listed below. They will only Deploy if they can roll the required number of dice given below:"],
+        "climate": {
+          "bull": [
+            {"description": "Non-Company Controlled Region: 6 dice"},
+            {"description": "Company Controlled Region: 2 dice"}
+          ],
+          "stag": [
+            {"description": "Non-Company Controlled Region: 5 dice"},
+            {"description": "Company Controlled Region: 3 dice"}
+          ],
+          "lion": [
+            {"description": "Non-Company Controlled Region: 4 dice"},
+            {"description": "Company Controlled Region: 4 dice"}
+          ],
+          "bear": [
+            {"description": "Non-Company Controlled Region: 3 dice"},
+            {"description": "Company Controlled Region: 5 dice"}
+          ],
+          "peacock": [
+            {"description": "Non-Company Controlled Region: 2 dice"},
+            {"description": "Company Controlled Region: 6 dice"}
+          ]
+        }
+      },
+      {
+        "promise": {
+          "description": "Increase or decrease the required number of dice by 1.",
+          "cost": 1
+        }
+      },
+      {
+        "promise": {
+          "description": "Once pieces have been exhausted and before rolling dice, exchange X value pieces that were exhausted for pieces that were not.",
+          "cost": "X",
+          "note": "Note: Local Alliance of strength X counts as X pieces."
+        }
+      },
+      {
+        "action": "Deploy Again?",
+        "climate": {
+          "bull": [
+            {"description": "The Crown will not attempt to take the Deploy action again."},
+            {"promise": {
+              "description": "The Crown takes the Deploy action again.",
+              "cost": 2
+            }}
+          ],
+          "stag": [
+            {"description": "The Crown will not attempt to take the Deploy action again."},
+            {"promise": {
+              "description": "The Crown takes the Deploy action again.",
+              "cost": 2
+            }}
+          ],
+          "lion": [
+            {"description": "The Crown will not attempt to take the Deploy action again."},
+            {"promise": {
+              "description": "The Crown takes the Deploy action again.",
+              "cost": 1
+            }}
+          ],
+          "bear": [
+            {"description": "The Crown will attempt to take the Deploy action again."},
+            {"promise": {
+              "description": "The Crown will not take the Deploy action again.",
+              "cost": 1
+            }}
+          ],
+          "peacock": [
+            {"description": "The Crown will attempt to take the Deploy action again."},
+            {"promise": {
+              "description": "The Crown will not take the Deploy action again.",
+              "cost": 1
+            }}
+          ]
+        }
+      }
+    ]
+  },
+  "presidents": {
+    "steps": [
+      {
+        "heading": "If you are President",
+        "promise": {
+          "description": "Place X Crown writers when filling orders. This always applies, even if you have no choice but to place Crown writers.",
+          "gain": "X",
+          "mandatory": true
+        }
+      },
+      {
+        "heading": "If the Crown is President",
+        "action": "Trade",
+        "description": ["The Crown will spend the necessary funds to roll the required number of dice to trade given below:"],
+        "climate": {
+          "bull": [
+            {"description": "2 dice"}
+          ],
+          "stag": [
+            {"description": "3 dice"}
+          ],
+          "lion": [
+            {"description": "4 dice"}
+          ],
+          "bear": [
+            {"description": "5 dice"}
+          ],
+          "peacock": [
+            {"description": "6 dice"}
+          ]
+        }
+      },
+      {
+        "description": ["The Crown first attempts to trade for the highest value trade route, but will trade in fewer regions if that is the only way to reach the required minimum number of dice to still trade."],
+        "promise": {
+          "description": "Increase or decrease the required number of dice by 1.",
+          "cost": 1
+        }
+      },
+      {
+        "action": "Additional Funds",
+        "description": ["If there are funds remaining in the treasury, the Crown will also spend up to an additional £3 on the Trade action."]
+      },
+      {
+        "action": "Filling Orders",
+        "description": [
+          "When determining which Orders to fill, the Crown will first try to trade for the highest value trade route; if multiple orders/routes have the same value, the Crown will prefer orders in the home region first, then orders closest to home region, and then most southerly equidistant orders.",
+          "The Crown will always place their own writers first, and then start placing player writers."
+        ],
+        "promise": {
+          "description": "The Crown places your writer instead of another.",
+          "cost": 1
+        }
+      },
+      {
+        "description": ["[2P ONLY] Player priority for each writer placed is determined according to the Player Button."]
+      }
+    ]
+  },
+  "china": {
+    "steps": [
+      {
+        "heading": "If you are Superintendent",
+        "description": ["Perform office actions as usual."]
+      },
+      {
+        "heading": "If the Crown is Superintendent",
+        "action": "Trade in China",
+        "description": ["The Crown will roll as many dice as possible to take a valid Trade in China action, so long as they can roll the required number of dice given below:"],
+        "climate": {
+          "bull": [
+            {"description": "1 die"},
+            {"promise": {
+              "description": "Increase or decrease the required number of dice by 1.",
+              "cost": 1
+            }}
+          ],
+          "stag": [
+            {"description": "2 dice"},
+            {"promise": {
+              "description": "Increase or decrease the required number of dice by 1.",
+              "cost": 1
+            }}
+          ],
+          "lion": [
+            {"description": "2 dice"},
+            {"promise": {
+              "description": "Increase or decrease the required number of dice by 1.",
+              "cost": 1
+            }}
+          ],
+          "bear": [
+            {"description": "3 dice"},
+            {"promise": {
+              "description": "Increase or decrease the required number of dice by 1.",
+              "cost": 1
+            }}
+          ],
+          "peacock": [
+            {"description": "3 dice"},
+            {"promise": {
+              "description": "Increase or decrease the required number of dice by 1.",
+              "cost": 1
+            }}
+          ]
+        }
+      }
+    ]
+  },
+  "revenue": {
+    "steps": [
+      {
+        "heading": "If the Crown is Chairman",
+        "description": ["The Crown will try to pay 1 dividend minimum, then more if able to leave £X in Company Balance as indicated:"],
+        "climate": {
+          "bull": [
+            {"description": "£0"},
+            {"promise": {
+              "description": "The Crown pays out 1 less dividend.",
+              "cost": 2
+            }},
+            {"promise": {
+              "description": "The Crown pays out 1 more dividend.",
+              "cost": 1
+            }}
+          ],
+          "stag": [
+            {"description": "£2"},
+            {"promise": {
+              "description": "The Crown pays out 1 less dividend.",
+              "cost": 2
+            }},
+            {"promise": {
+              "description": "The Crown pays out 1 more dividend.",
+              "cost": 1
+            }}
+          ],
+          "lion": [
+            {"description": "£4"},
+            {"promise": {
+              "description": "The Crown pays out 1 less dividend.",
+              "cost": 1
+            }},
+            {"promise": {
+              "description": "The Crown pays out 1 more dividend.",
+              "cost": 2
+            }}
+          ],
+          "bear": [
+            {"description": "£6"},
+            {"promise": {
+              "description": "The Crown pays out 1 less dividend.",
+              "cost": 1
+            }},
+            {"promise": {
+              "description": "The Crown pays out 1 more dividend.",
+              "cost": 2
+            }}
+          ],
+          "peacock": [
+            {"description": "£8"},
+            {"promise": {
+              "description": "The Crown pays out 1 less dividend.",
+              "cost": 1
+            }},
+            {"promise": {
+              "description": "The Crown pays out 1 more dividend.",
+              "cost": 2
+            }}
+          ]
+        }
+      },
+      {
+        "action": "Royal Protection",
+        "description": ["If there are emergency loans, the Crown always will discard Royal Protection if available."]
+      },
+      {
+        "heading": "Firm Expenses and Dividends",
+        "action": "Emergency Investments",
+        "description": ["During the Revenue phase, if a firm is seeking emergency investment, the Crown will not invest."],
+        "promise": {
+          "description": "The Crown invests in your firm with Company shares (unless they are weak), and then workshops, regardless of majority of Company shares.",
+          "cost": 4,
+          "note": "Note: players cannot use this bribe if doing so results in the Crown having more firm shares than manager."
+        }
+      },
+      {
+        "action": "Firm Dividends",
+        "promise": {
+          "description": "If you pay the Crown firm share dividends equal to or more than any (all) other player(s) in the firm (i.e. do not include cash paid for the firm manager dividend).",
+          "gain": "X",
+          "note": "X = the number of Crown firm shares (max 3)."
+        }
+      }
+    ]
+  },
+  "events_in_india": {
+    "steps": [
+      {
+        "description": ["If the Crown is a Commander and must defend a Crisis, you choose which pieces will be exhausted to meet the Crisis."],
+        "note": "[2P ONLY] The player holding the Player Button chooses."
+      }
+    ]
+  },
+  "parliament_meets": {
+    "steps": [
+      {
+        "description": ["The Crown will always vote first. The Crown will vote for or against according to the Crown's Voting Plan (detailed on the last page). The Crown will use all available votes from their Enterprises to influence their vote. Unlike players, the Crown will receive additional votes according to the size of their treasury as per below:"],
+        "bullets": [
+          "£0 - £3: +0 Votes",
+          "£4 - £6: +1 Votes",
+          "£7 - £10: +2 Votes",
+          "£11 - £14: +3 Votes",
+          "£15+: +4 Votes"
+        ]
+      },
+      {
+        "heading": "If you are Prime Minister",
+        "action": "Climate Shift",
+        "description": [
+          "After the law is chosen, and before voting begins, roll 6 dice. If the number of successes is greater or equal to Company Standing (which runs from 0-7 where Company Failure = 0), shift the Crown Climate one position to the right, if able.",
+          "Then, if the number of successes is greater than Company Standing, shift it once more to the right, if able.",
+          "Then, if number of failures + catastrophic failures is less or equal to Company Standing, shift Crown Climate to the left, if able.",
+          "Finally, if the number of failures + catastrophic failures is less than Company Standing, shift it once more to the left, if able."
+        ]
+      },
+      {
+        "heading": "If the Crown is Prime Minister",
+        "action": "Climate Shift",
+        "description": [
+          "First, perform Climate Shift as described above.",
+          "The Crown will draw cards from the Law deck according to the position indicated by the card with the shaded card. If a Dilemma is drawn, the Crown must stop drawing and vote on the Dilemma.",
+          "Unlike players, the Crown may vote against the current law even if they are the Prime Minister. The Crown can hold both the Prime Minister dial and be Opposition Leader."
+        ]
+      },
+      {
+        "promise": {
+          "description": "The Crown stops drawing and selects the law just drawn.",
+          "cost": 2
+        }
+      },
+      {
+        "promise": {
+          "description": "The Crown skips the law drawn and draws again (must select 3rd law drawn).",
+          "cost": 2
+        }
+      },
+      {
+        "action": "Policy Marker Movement Priority",
+        "description": [
+          "Compare the two policy space choices and their net effects.",
+          "For each choice, determine their effect by counting the number of affected Player entities (i.e. workshops, shipyards, shares, luxuries, windows) and compare the total against the number of Crown entities to get the Crown total. Multiply this total by -1 if the choice is tax.",
+          "The Crown will choose the option where the Crown total is highest (e.g. -1 is preferable to -2). Break ties using the AI card clockwise/counterclockwise arrows. If the Crown chooses a Power policy in which the Power marker is already in the highest position, swap the position of the two bottom Power markers."
+        ],
+        "promise": {
+          "description": "The Crown moves the policy marker to the alternative policy.",
+          "cost": 4
+        }
+      },
+      {
+        "action": "Royal Privilege",
+        "description": ["If the Crown cannot afford a tax (or family expenses), the Crown will use additional funds from the Company treasury as needed to pay for the cost. The Crown will take emergency loans if necessary to create the necessary cash. This may cause Company failure. If the Crown is Chairman, Royal Protection will always be discarded if it is available."]
+      }
+    ]
+  },
+  "upkeep_refresh": {
+    "steps": [
+      {
+        "description": ["The Crown will pay family expenses. If the Crown cannot afford expenses, they will use Royal Privilege."],
+        "promise": {
+          "description": "[SOLO] You have one or more writers in a Crown Presidency, but you do not have at least one writer return from filling an order in that Presidency.",
+          "gain": 1,
+          "mandatory": true
+        }
+      }
+    ]
+  }
+}
