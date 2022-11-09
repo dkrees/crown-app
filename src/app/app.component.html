@@ -6,14 +6,25 @@
           <ion-list-header>The Crown</ion-list-header>
           <ion-note>John Company 2nd Edition</ion-note>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let climate of climates; let i = index">
+          <!-- <ion-menu-toggle auto-hide="false" *ngFor="let climate of climates; let i = index">
             <ion-item lines="none" detail="false" (click)="selectedClimate(climate)" [color]="climate.selected ? climate.value : ''">
               <ion-thumbnail slot="start">
                 <ion-img [src]="'/assets/images/' + climate.value + '.png'"></ion-img>
               </ion-thumbnail>
               <ion-label [color]="climate.selected ? 'dark' : 'light'">{{ climate.title }}</ion-label>
             </ion-item>
-          </ion-menu-toggle>
+          </ion-menu-toggle> -->
+
+          <ion-item>
+            <ion-segment color="light" mode="ios" value="solo">
+              <ion-segment-button value="solo">
+                <ion-label>Solo</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="2-player">
+                <ion-label>2 Player</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
         </ion-list>
 
       </ion-content>

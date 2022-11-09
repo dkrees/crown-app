@@ -88,6 +88,11 @@ export class FolderPage implements OnInit {
     return diceResults.filter((result) => result <= successOn);
   }
 
+  // climateSegmentChange(e: Event) {
+  //   console.log(this.climate);
+  //   // this.climateChange(e as {detail: {value: string}})
+  // }
+
   climateChange(climate: Climate) {
     this.climate = climate;
     this.crownTurn();
@@ -165,9 +170,12 @@ export class FolderPage implements OnInit {
     await actionSheet.present();
 
     const result = await actionSheet.onDidDismiss();
-    const climate = result.data.action as Climate;
-    console.log(climate);
-    this.climateChange(climate);
+
+    if (result.data) {
+      const climate = result.data.action as Climate;
+      console.log(climate);
+      this.climateChange(climate);
+    }
   }
 
 }

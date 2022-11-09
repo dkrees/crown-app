@@ -3,40 +3,48 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-      <ion-thumbnail slot="start">
+      <!-- <ion-thumbnail slot="start">
         <ion-img [src]="'/assets/images/' + climate + '.png'"></ion-img>
-      </ion-thumbnail>
-      <ion-title>
+      </ion-thumbnail> -->
+      <!-- <ion-title>
       {{ climate | titlecase }}
-    </ion-title>
-    <ion-buttons slot="end">
+    </ion-title> -->
+    <ion-segment [(ngModel)]="climate" scrollable>
+      <ion-segment-button value="bull">
+        <ion-thumbnail class="small">
+          <img [src]="'/assets/images/bull.png'"/>
+        </ion-thumbnail>
+      </ion-segment-button>
+      <ion-segment-button value="stag">
+        <ion-thumbnail class="small">
+          <img [src]="'/assets/images/stag.png'"/>
+        </ion-thumbnail>
+      </ion-segment-button>
+      <ion-segment-button value="lion">
+        <ion-thumbnail class="small">
+          <img [src]="'/assets/images/lion.png'"/>
+        </ion-thumbnail>
+      </ion-segment-button>
+      <ion-segment-button value="bear">
+        <ion-thumbnail class="small">
+          <img [src]="'/assets/images/bear.png'"/>
+        </ion-thumbnail>
+      </ion-segment-button>
+      <ion-segment-button value="peacock">
+        <ion-thumbnail class="small">
+          <img [src]="'/assets/images/peacock.png'"/>
+        </ion-thumbnail>
+      </ion-segment-button>
+    </ion-segment>
+    <!-- <ion-buttons slot="end">
       <ion-button (click)="presentActionSheet()">
         Climate
       </ion-button>
-      <!-- <ion-select interface="action-sheet" placeholder="Select One">
-        <ion-select-option value="red">Red</ion-select-option>
-        <ion-select-option value="green">Green</ion-select-option>
-        <ion-select-option value="blue">Blue</ion-select-option>
-      </ion-select>
-      <ion-list>
-        <ion-item>
-          <ion-select interface="action-sheet" placeholder="Select fruit">
-            <ion-select-option value="apples">Apples</ion-select-option>
-            <ion-select-option value="oranges">Oranges</ion-select-option>
-            <ion-select-option value="bananas">Bananas</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list> -->
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title>The Crownii</ion-title>
-    </ion-toolbar>
-  </ion-header> -->
 
   <div>
     <!-- <app-standing [companyStanding]="companyStanding" (standingDidChange)="standingChange($event)"></app-standing> -->

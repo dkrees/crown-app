@@ -34,6 +34,11 @@ ul {
   --ion-color-base: var(--ion-color-peacock);
 }
 
+ion-thumbnail.small {
+  --size: 36px;
+  --border-radius: 3px;
+}
+
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
 
