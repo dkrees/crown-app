@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CrownService } from '../crown.service';
 
 export type Climate = 'bull' | 'stag' | 'lion' | 'bear' | 'peacock';
 
@@ -10,7 +11,7 @@ export type Climate = 'bull' | 'stag' | 'lion' | 'bear' | 'peacock';
 export class ClimateComponent implements OnInit {
 
   @Input() climate: Climate;
-  @Output() climateDidChange: EventEmitter<{value: Climate}> = new EventEmitter();
+  @Output() climateDidChange: EventEmitter<Climate> = new EventEmitter();
 
   climateIndex: number;
 
@@ -22,7 +23,9 @@ export class ClimateComponent implements OnInit {
     {value: 'peacock'},
   ];
 
-  constructor() { }
+  constructor(
+    private crownService: CrownService
+  ) { }
 
   ngOnInit() {
     this.climateIndex = this.climates.findIndex(c => c.value === this.climate);
@@ -31,15 +34,20 @@ export class ClimateComponent implements OnInit {
   movesLeft() {
     if (this.climateIndex > 0) {
       this.climateIndex--;
-      this.climateDidChange.emit(this.climates[this.climateIndex]);
+      this.updateClimate(this.climates[this.climateIndex].value);
     }
   }
 
   movesRight() {
     if (this.climateIndex < this.climates.length-1) {
       this.climateIndex++;
-      this.climateDidChange.emit(this.climates[this.climateIndex]);
+      this.updateClimate(this.climates[this.climateIndex].value);
     }
+  }
+
+  updateClimate(climate: Climate) {
+    this.crownService.setClimate(climate);
+    this.climateDidChange.emit(climate);
   }
 
 }

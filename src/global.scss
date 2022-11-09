@@ -9,6 +9,31 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.ion-color-bull {
+  --ion-color-base: var(--ion-color-bull);
+}
+
+.ion-color-stag {
+  --ion-color-base: var(--ion-color-stag);
+}
+
+.ion-color-lion {
+  --ion-color-base: var(--ion-color-lion);
+}
+
+.ion-color-bear {
+  --ion-color-base: var(--ion-color-bear);
+}
+
+.ion-color-peacock {
+  --ion-color-base: var(--ion-color-peacock);
+}
+
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
 

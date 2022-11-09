@@ -9,6 +9,30 @@
       "peacock": []
     }
   },
+  "vote_to_deregulate": {
+    "steps": [
+      {
+        "description": ["The Crown will never initiate The Vote to Deregulate when they are Prime Minister unless they must. They will always vote last and against. They may spend up to the amount below (once) if it moves the Votes marker to a failing position:"],
+        "climate": {
+          "bull": [
+            {"description": "£6"}
+          ],
+          "stag": [
+            {"description": "£5"}
+          ],
+          "lion": [
+            {"description": "£4"}
+          ],
+          "bear": [
+            {"description": "£3"}
+          ],
+          "peacock": [
+            {"description": "£2"}
+          ]
+        }
+      }
+    ]
+  },
   "london_season": {
     "steps": [
       {

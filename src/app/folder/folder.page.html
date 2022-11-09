@@ -1,9 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header [translucent]="true" >
+  <ion-toolbar [color]="climate">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>The Crown</ion-title>
+      <ion-thumbnail slot="start">
+        <ion-img [src]="'/assets/images/' + climate + '.png'"></ion-img>
+      </ion-thumbnail>
+      <ion-title>
+      {{ climate | titlecase }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentActionSheet()">
+        Climate
+      </ion-button>
+      <!-- <ion-select interface="action-sheet" placeholder="Select One">
+        <ion-select-option value="red">Red</ion-select-option>
+        <ion-select-option value="green">Green</ion-select-option>
+        <ion-select-option value="blue">Blue</ion-select-option>
+      </ion-select>
+      <ion-list>
+        <ion-item>
+          <ion-select interface="action-sheet" placeholder="Select fruit">
+            <ion-select-option value="apples">Apples</ion-select-option>
+            <ion-select-option value="oranges">Oranges</ion-select-option>
+            <ion-select-option value="bananas">Bananas</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list> -->
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -16,8 +40,8 @@
 
   <div>
     <!-- <app-standing [companyStanding]="companyStanding" (standingDidChange)="standingChange($event)"></app-standing> -->
-    <app-climate [climate]="climate" (climateDidChange)="climateChange($event)"></app-climate>
-    <app-phase [phase]="phase" (phaseDidChange)="phaseChange($event)"></app-phase>
+    <!-- <app-climate [climate]="climate" (climateDidChange)="climateChange($event)"></app-climate> -->
+    <!-- <app-phase [phase]="phase" (phaseDidChange)="phaseChange($event)"></app-phase> -->
 
     <ion-list lines="none">
       <ng-container *ngFor="let step of crownActions.steps">
@@ -27,20 +51,21 @@
               <h2 *ngIf="step.heading">{{ step.heading | uppercase }}</h2>
               <h4 *ngIf="step.action">{{ step.action }}</h4>
               <p *ngFor="let description of step.description">{{ description }}</p>
-
-              <ion-list *ngIf="step.bullets" lines="full">
-                <ion-item *ngFor="let bullet of step.bullets">
-                  <ion-label class="ion-text-wrap">
-                    <p>{{ bullet }}</p>
-                  </ion-label>
-                </ion-item>
-              </ion-list>
-
             </ion-text>
           </ion-label>
           <ion-note *ngIf="step.note" slot="helper" class="ion-text-wrap">
             <ion-text><i>{{ step.note }}</i></ion-text>
           </ion-note>
+        </ion-item>
+
+        <ion-item *ngIf="step.bullets">
+          <ion-label class="ion-text-wrap">
+            <ul>
+              <li *ngFor="let bullet of step.bullets">
+                <ion-text color="dark">{{ bullet }}</ion-text>
+              </li>
+            </ul>
+          </ion-label>
         </ion-item>
 
         <app-promise *ngIf="step.promise" [promise]="step.promise"></app-promise>
@@ -49,7 +74,9 @@
           <ng-container *ngFor="let crownClimate of step.climate[climate]">
             <ion-item *ngIf="crownClimate.description">
               <ion-label class="ion-text-wrap">
-                <p>{{ crownClimate.description }}</p>
+                <ion-text color="dark">
+                  {{ crownClimate.description }}
+                </ion-text>
               </ion-label>
               <ion-note *ngIf="crownClimate.note" slot="helper" class="ion-text-wrap">
                 <ion-text><i>{{ crownClimate.note }}</i></ion-text>
@@ -73,5 +100,20 @@
     </ion-list>
   </div>
 
-
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="previousPhase()">
+        <ion-icon name="arrow-back-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ phase.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="nextPhase()">
+        <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
