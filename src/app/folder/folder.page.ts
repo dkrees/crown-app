@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ActionSheetController } from '@ionic/angular';
 import { Climate } from '../climate/climate.component';
-import { CrownService } from '../crown.service';
+import { CrownService, Mode } from '../crown.service';
 
 @Component({
   selector: 'app-folder',
@@ -34,6 +34,7 @@ export class FolderPage implements OnInit {
 
   handbook;
   companyStanding = 10;
+  mode: Mode;
   climate: Climate;
   phaseIndex = 1;
   phase: {name: string; value: string};
@@ -45,16 +46,23 @@ export class FolderPage implements OnInit {
     private actionSheetCtrl: ActionSheetController
     ) { }
 
-    ngOnInit() {
-      // this.folder = this.activatedRoute.snapshot.paramMap.get('id');
-      // this.phaseIndex = this.roundPhases.findIndex(c => c.value === this.phase.value);
-      setTimeout(() => {
-        this.crownService.getClimate().subscribe((climate: Climate) => {
-          console.log('climate changed to:', climate);
-          this.climateChange(climate);
-        });
-      }, 0);
+  ngOnInit() {
+    // this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+    // this.phaseIndex = this.roundPhases.findIndex(c => c.value === this.phase.value);
+    setTimeout(() => {
+      this.crownService.getClimate().subscribe((climate: Climate) => {
+        console.log('climate changed to:', climate);
+        this.climateChange(climate);
+      });
+    }, 0);
 
+    setTimeout(() => {
+      this.crownService.getSoloMode().subscribe((soloMode: Mode) => {
+        console.log('solo mode changed to:', soloMode);
+        this.mode = soloMode;
+        this.crownTurn();
+      });
+    }, 0);
 
     this.phase = this.roundPhases[this.phaseIndex];
 
@@ -88,11 +96,6 @@ export class FolderPage implements OnInit {
     return diceResults.filter((result) => result <= successOn);
   }
 
-  // climateSegmentChange(e: Event) {
-  //   console.log(this.climate);
-  //   // this.climateChange(e as {detail: {value: string}})
-  // }
-
   climateChange(climate: Climate) {
     this.climate = climate;
     this.crownTurn();
@@ -122,60 +125,60 @@ export class FolderPage implements OnInit {
     this.crownActions = this.handbook[this.phase.value];
   }
 
-  async presentActionSheet() {
-    const actionSheet = await this.actionSheetCtrl.create({
-      header: 'Example header',
-      subHeader: 'Example subheader',
-      buttons: [
-        {
-          text: 'Bull',
-          data: {
-            action: 'bull',
-          },
-        },
-        {
-          text: 'Stag',
-          data: {
-            action: 'stag',
-          },
-        },
-        {
-          text: 'Lion',
-          data: {
-            action: 'lion',
-          },
-        },
-        {
-          text: 'Bear',
-          data: {
-            action: 'bear',
-          },
-        },
-        {
-          text: 'Peacock',
-          data: {
-            action: 'peacock',
-          },
-        },
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          data: {
-            action: 'cancel',
-          },
-        },
-      ],
-    });
+  // async presentActionSheet() {
+  //   const actionSheet = await this.actionSheetCtrl.create({
+  //     header: 'Example header',
+  //     subHeader: 'Example subheader',
+  //     buttons: [
+  //       {
+  //         text: 'Bull',
+  //         data: {
+  //           action: 'bull',
+  //         },
+  //       },
+  //       {
+  //         text: 'Stag',
+  //         data: {
+  //           action: 'stag',
+  //         },
+  //       },
+  //       {
+  //         text: 'Lion',
+  //         data: {
+  //           action: 'lion',
+  //         },
+  //       },
+  //       {
+  //         text: 'Bear',
+  //         data: {
+  //           action: 'bear',
+  //         },
+  //       },
+  //       {
+  //         text: 'Peacock',
+  //         data: {
+  //           action: 'peacock',
+  //         },
+  //       },
+  //       {
+  //         text: 'Cancel',
+  //         role: 'cancel',
+  //         data: {
+  //           action: 'cancel',
+  //         },
+  //       },
+  //     ],
+  //   });
 
-    await actionSheet.present();
+  //   await actionSheet.present();
 
-    const result = await actionSheet.onDidDismiss();
+  //   const result = await actionSheet.onDidDismiss();
 
-    if (result.data) {
-      const climate = result.data.action as Climate;
-      console.log(climate);
-      this.climateChange(climate);
-    }
-  }
+  //   if (result.data) {
+  //     const climate = result.data.action as Climate;
+  //     console.log(climate);
+  //     this.climateChange(climate);
+  //   }
+  // }
 
 }

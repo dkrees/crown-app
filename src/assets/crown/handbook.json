@@ -92,15 +92,25 @@
         "description": ["If there are four or more vacant offices, the Crown will first Enlist Writer as a free action. Then, if there is a Presidential vacancy with no Crown writer, they will use a free action to Enlist Writer in that Presidency."]
       },
       {
+        "mode": "solo",
         "heading": "Family Actions",
         "description": [
-          "The Crown always takes two family actions each turn based on the following chart, proceeding left to right. Skip any action that is not viable or cannot be afforded.",
-          "[2P ONLY] The Crown takes one family action each turn."
+          "The Crown always takes two family actions based on the following chart, proceeding left to right. Skip any action that is not viable or cannot be afforded."
+        ]
+      },
+      {
+        "mode": "twoPlayer",
+        "heading": "Family Actions",
+        "description": [
+          "The Crown takes one family action based on the following chart, proceeding left to right. Skip any action that is not viable or cannot be afforded."
         ]
       },
       {
         "heading": "Extra Action",
-        "description": ["If the most recently passed extra action is an action the Crown chooses to take based on the following chart, the Crown will treat that action as an extra action."],
+        "description": ["If the most recently passed extra action is an action the Crown chooses to take based on the following chart, the Crown will treat that action as an extra action."]
+      },
+      {
+        "mode": "solo",
         "note": "E.g. the Crown may end up taking 3 actions from the following chart in a solo game."
       },
       {
@@ -212,8 +222,9 @@
               "description": "Will seek one investment in a firm."
             },
             {
+              "mode": "solo",
               "promise": {
-                "description": "[SOLO ONLY] Deny the Crown's investment. X = value of firm.",
+                "description": "Deny the Crown's investment. X = value of firm.",
                 "cost": "X"
               }
             }
@@ -223,8 +234,9 @@
               "description": "Will seek one investment in a firm."
             },
             {
+              "mode": "solo",
               "promise": {
-                "description": "[SOLO ONLY] Deny the Crown's investment. X = value of firm.",
+                "description": "Deny the Crown's investment. X = value of firm.",
                 "cost": "X"
               }
             }
@@ -234,8 +246,9 @@
               "description": "Will seek one investment in a firm."
             },
             {
+              "mode": "solo",
               "promise": {
-                "description": "[SOLO ONLY] Deny the Crown's investment. X = value of firm.",
+                "description": "Deny the Crown's investment. X = value of firm.",
                 "cost": "X"
               }
             }
@@ -243,9 +256,10 @@
         }
       },
       {
-        "description": ["[2P ONLY] The Crown will initiate each investment according to the Player Button, switching after each."],
+        "mode": "twoPlayer",
+        "description": ["The Crown will initiate each investment according to the Player Button, switching after each."],
         "promise": {
-          "description": "[2P ONLY] The Crown will give consent for a hostile takeover from a player holding the Player Button. X = number of firm shares the Crown holds.",
+          "description": "The Crown will give consent for a hostile takeover from a player holding the Player Button. X = number of firm shares the Crown holds.",
           "cost": "X"
         }
       }
@@ -302,7 +316,7 @@
             {
               "promise": {
                 "description": "Take a share from the Crown.",
-              "cost": -3}
+              "cost": 3}
             },
             {
               "promise": {
@@ -332,8 +346,9 @@
         "cost": 3}
       },
       {
+        "mode": "twoPlayer",
         "promise": {
-          "description": "[2P ONLY] If the Crown does not have a majority, any player can persuade the Crown to support their election. X = number of supporting Crown shares.",
+          "description": "If the Crown does not have a majority, any player can persuade the Crown to support their election. X = number of supporting Crown shares.",
         "cost": "X"}
       },
       {
@@ -361,14 +376,17 @@
         "description": ["The Crown always hires their own family if able."]
       },
       {
+        "mode": "solo",
         "promise": {
-          "description": "[SOLO ONLY] You must give consent for nepotism to the Crown when required if they have 2 or more promises. Otherwise, consent is optional.",
+          "description": "You must give consent for nepotism to the Crown when required if they have 2 or more promises. Otherwise, consent is optional.",
           "gain": 2,
-        "mandatory": true}
+          "mandatory": true
+        }
       },
       {
+        "mode": "twoPlayer",
         "promise": {
-          "description": "[2P ONLY] When both players are candidates, each player may perform this favor if they give consent unanimously.",
+          "description": "When both players are candidates, each player may perform this favor if they give consent unanimously.",
           "gain": 1
         }
       },
@@ -1659,7 +1677,8 @@
         }
       },
       {
-        "description": ["[2P ONLY] Player priority for each writer placed is determined according to the Player Button."]
+        "mode": "twoPlayer",
+        "description": ["Player priority for each writer placed is determined according to the Player Button."]
       }
     ]
   },
@@ -1803,8 +1822,11 @@
   "events_in_india": {
     "steps": [
       {
-        "description": ["If the Crown is a Commander and must defend a Crisis, you choose which pieces will be exhausted to meet the Crisis."],
-        "note": "[2P ONLY] The player holding the Player Button chooses."
+        "description": ["If the Crown is a Commander and must defend a Crisis, you choose which pieces will be exhausted to meet the Crisis."]
+      },
+      {
+        "mode":"twoPlayer",
+        "note": "The player holding the Player Button chooses."
       }
     ]
   },
@@ -1872,9 +1894,12 @@
   "upkeep_refresh": {
     "steps": [
       {
-        "description": ["The Crown will pay family expenses. If the Crown cannot afford expenses, they will use Royal Privilege."],
+        "description": ["The Crown will pay family expenses. If the Crown cannot afford expenses, they will use Royal Privilege."]
+      },
+      {
+        "mode": "solo",
         "promise": {
-          "description": "[SOLO] You have one or more writers in a Crown Presidency, but you do not have at least one writer return from filling an order in that Presidency.",
+          "description": "You have one or more writers in a Crown Presidency, but you do not have at least one writer return from filling an order in that Presidency.",
           "gain": 1,
           "mandatory": true
         }

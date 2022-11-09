@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Climate } from './climate/climate.component';
 
+export type Mode = 'solo' | 'twoPlayer';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +13,7 @@ export class CrownService {
   // crownClimate$: Observable<Climate>;
   // private climateSubject: Subject<Climate>;
   crownClimate: BehaviorSubject<Climate> = new BehaviorSubject('lion');
+  soloMode: BehaviorSubject<Mode> = new BehaviorSubject('solo');
 
   constructor(
     private http: HttpClient
@@ -30,5 +33,14 @@ export class CrownService {
 
   getClimate(): Observable<Climate> {
     return this.crownClimate.asObservable();
+  }
+
+  setSoloMode(mode: Mode) {
+    console.log('setting solo mode to:', mode);
+    this.soloMode.next(mode);
+  }
+
+  getSoloMode(): Observable<Mode> {
+    return this.soloMode.asObservable();
   }
 }
