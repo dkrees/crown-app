@@ -3,13 +3,25 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-      <!-- <ion-thumbnail slot="start">
-        <ion-img [src]="'/assets/images/' + climate + '.png'"></ion-img>
-      </ion-thumbnail> -->
-      <!-- <ion-title>
-      {{ climate | titlecase }}
-    </ion-title> -->
-    <ion-segment [(ngModel)]="climate" scrollable>
+    <!-- <ion-thumbnail slot="start" class="ion-hide-sm-up">
+      <img [src]="'/assets/images/' + climate + '.png'"/>
+    </ion-thumbnail> -->
+    <ion-title class="ion-hide-sm-up">
+      <!-- {{ climate | titlecase }} -->
+      <!-- <ion-grid>
+        <ion-row class="ion-justify-content-end">
+          <ion-col> -->
+            <ion-thumbnail style="display: block; margin: 0 auto; padding: 3px;">
+              <img [src]="'/assets/images/' + climate + '.png'" [attr.alt]="climate"/>
+            </ion-thumbnail>
+          <!-- </ion-col>
+        </ion-row>
+      </ion-grid> -->
+        <!-- <ion-label>{{ climate | titlecase }}</ion-label> -->
+      <!-- </ion-item> -->
+    </ion-title>
+
+    <ion-segment class="ion-hide-sm-down" mode="ios" [(ngModel)]="climate" scrollable>
       <ion-segment-button value="bull">
         <ion-thumbnail class="small">
           <img [src]="'/assets/images/bull.png'"/>
@@ -36,11 +48,13 @@
         </ion-thumbnail>
       </ion-segment-button>
     </ion-segment>
-    <!-- <ion-buttons slot="end">
+
+
+    <ion-buttons slot="end" class="ion-hide-sm-up">
       <ion-button (click)="presentActionSheet()">
-        Climate
+        CLIMATE
       </ion-button>
-    </ion-buttons> -->
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -58,20 +72,18 @@
             <ion-label class="ion-text-wrap">
               <ion-text color="dark">
                 <h2 *ngIf="step.heading">{{ step.heading | uppercase }}</h2>
-                <h4 *ngIf="step.action">{{ step.action }}</h4>
+                <h3 *ngIf="step.action">{{ step.action }}</h3>
                 <p *ngFor="let description of step.description">{{ description }}</p>
+                <p *ngIf="step.note"><i>{{ step.note }}</i></p>
               </ion-text>
             </ion-label>
-            <ion-note *ngIf="step.note" slot="helper" class="ion-text-wrap">
-              <ion-text color="dark"><i>{{ step.note }}</i></ion-text>
-            </ion-note>
           </ion-item>
 
           <ion-item *ngIf="step.bullets">
             <ion-label class="ion-text-wrap">
               <ul>
                 <li *ngFor="let bullet of step.bullets">
-                  <ion-text color="dark">{{ bullet }}</ion-text>
+                  <ion-text color="dark"><p>{{ bullet }}</p></ion-text>
                 </li>
               </ul>
             </ion-label>

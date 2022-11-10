@@ -125,60 +125,58 @@ export class FolderPage implements OnInit {
     this.crownActions = this.handbook[this.phase.value];
   }
 
-  // async presentActionSheet() {
-  //   const actionSheet = await this.actionSheetCtrl.create({
-  //     header: 'Example header',
-  //     subHeader: 'Example subheader',
-  //     buttons: [
-  //       {
-  //         text: 'Bull',
-  //         data: {
-  //           action: 'bull',
-  //         },
-  //       },
-  //       {
-  //         text: 'Stag',
-  //         data: {
-  //           action: 'stag',
-  //         },
-  //       },
-  //       {
-  //         text: 'Lion',
-  //         data: {
-  //           action: 'lion',
-  //         },
-  //       },
-  //       {
-  //         text: 'Bear',
-  //         data: {
-  //           action: 'bear',
-  //         },
-  //       },
-  //       {
-  //         text: 'Peacock',
-  //         data: {
-  //           action: 'peacock',
-  //         },
-  //       },
-  //       {
-  //         text: 'Cancel',
-  //         role: 'cancel',
-  //         data: {
-  //           action: 'cancel',
-  //         },
-  //       },
-  //     ],
-  //   });
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetCtrl.create({
+      header: 'Crown Climate',
+      buttons: [
+        {
+          text: 'Bull',
+          data: {
+            action: 'bull',
+          },
+        },
+        {
+          text: 'Stag',
+          data: {
+            action: 'stag',
+          },
+        },
+        {
+          text: 'Lion',
+          data: {
+            action: 'lion',
+          },
+        },
+        {
+          text: 'Bear',
+          data: {
+            action: 'bear',
+          },
+        },
+        {
+          text: 'Peacock',
+          data: {
+            action: 'peacock',
+          },
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          data: {
+            action: 'cancel',
+          },
+        },
+      ],
+    });
 
-  //   await actionSheet.present();
+    await actionSheet.present();
 
-  //   const result = await actionSheet.onDidDismiss();
+    const result = await actionSheet.onDidDismiss();
 
-  //   if (result.data) {
-  //     const climate = result.data.action as Climate;
-  //     console.log(climate);
-  //     this.climateChange(climate);
-  //   }
-  // }
+    if (result.data) {
+      const climate = result.data.action as Climate;
+      this.climateChange(climate);
+    }
+  }
 
 }
