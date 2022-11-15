@@ -1822,6 +1822,7 @@
   "events_in_india": {
     "steps": [
       {
+        "action": "Crises in India",
         "description": ["If the Crown is a Commander and must defend a Crisis, you choose which pieces will be exhausted to meet the Crisis."]
       },
       {

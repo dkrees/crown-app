@@ -16,15 +16,15 @@ interface Promise {
 export class PromiseComponent implements OnInit {
 
   @Input() promise: Promise;
-  color;
+  bgColor;
 
   constructor() { }
 
   ngOnInit() {
-    this.color = this.promise.cost ? 'warning' : 'success';
+    this.bgColor = this.promise.cost ? 'warning' : 'success';
 
     if (this.promise.mandatory) {
-      this.color = this.promise.cost ? 'warning-shade' : 'success-shade';
+      this.bgColor = this.promise.cost ? 'danger' : 'tertiary';
     }
   }
 

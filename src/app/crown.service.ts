@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { Climate } from './climate/climate.component';
 
 export type Mode = 'solo' | 'twoPlayer';
+export type Climate = 'bull' | 'stag' | 'lion' | 'bear' | 'peacock';
 
 @Injectable({
   providedIn: 'root'

@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { ActionSheetController } from '@ionic/angular';
-import { Climate } from '../climate/climate.component';
-import { CrownService, Mode } from '../crown.service';
+import { CrownService, Mode, Climate } from '../crown.service';
 
 @Component({
-  selector: 'app-folder',
-  templateUrl: './folder.page.html',
-  styleUrls: ['./folder.page.scss'],
+  selector: 'app-handbook',
+  templateUrl: './handbook.page.html',
+  styleUrls: ['./handbook.page.scss'],
 })
-export class FolderPage implements OnInit {
+export class HandbookPage implements OnInit {
 
   public roundPhases = [
     {name: 'Vote to Deregulate', value: 'vote_to_deregulate'},
@@ -25,7 +23,7 @@ export class FolderPage implements OnInit {
     {name: 'Governors', value: 'governors'},
     {name: 'Commanders', value: 'commanders'},
     {name: 'Presidents', value: 'presidents'},
-    {name: 'Superintendent of Trade in China', value: 'china'},
+    {name: 'Trade in China', value: 'china'},
     {name: 'Revenue', value: 'revenue'},
     {name: 'Events in India', value: 'events_in_india'},
     {name: 'Parliament Meets', value: 'parliament_meets'},
@@ -41,14 +39,11 @@ export class FolderPage implements OnInit {
   crownActions: {steps?: any[]; climate?: any} = {};
 
   constructor(
-    private activatedRoute: ActivatedRoute,
     private crownService: CrownService,
     private actionSheetCtrl: ActionSheetController
     ) { }
 
   ngOnInit() {
-    // this.folder = this.activatedRoute.snapshot.paramMap.get('id');
-    // this.phaseIndex = this.roundPhases.findIndex(c => c.value === this.phase.value);
     setTimeout(() => {
       this.crownService.getClimate().subscribe((climate: Climate) => {
         console.log('climate changed to:', climate);
@@ -174,6 +169,7 @@ export class FolderPage implements OnInit {
     const result = await actionSheet.onDidDismiss();
 
     if (result.data) {
+      if (result.data.action === 'cancel') { return; }
       const climate = result.data.action as Climate;
       this.climateChange(climate);
     }
