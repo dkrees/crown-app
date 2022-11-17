@@ -1,37 +1,35 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>The Crown</ion-list-header>
-          <ion-note>John Company 2nd Edition</ion-note>
-          <ion-item>
-            <ion-segment color="light" mode="ios" [(ngModel)]="mode" (ionChange)="soloModeChange($event)">
-              <ion-segment-button value="solo">
-                <ion-label>Solo</ion-label>
-              </ion-segment-button>
-              <ion-segment-button value="twoPlayer">
-                <ion-label>2 Player</ion-label>
-              </ion-segment-button>
-            </ion-segment>
-          </ion-item>
+  <ion-menu contentId="main-content" type="overlay">
+    <ion-content>
+      <ion-list id="inbox-list">
+        <ion-list-header>The Crown</ion-list-header>
+        <ion-note>John Company 2nd Edition</ion-note>
+        <ion-item>
+          <ion-segment color="light" mode="ios" [(ngModel)]="mode" (ionChange)="soloModeChange($event)">
+            <ion-segment-button value="solo">
+              <ion-label>Solo</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="twoPlayer">
+              <ion-label>2 Player</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-item>
 
-          <ion-note>
-            This app is designed to simplify the Crown handbook. It shows only the relevant information based on the state of play - Solo or Two Player, the Crown's Climate and the round's phase. In the pop out menu you can set the game's mode (solo or two player), the top of the app allows you to change the crown's climate, and the bottom of the page allows you to navigate through the phases.
-          </ion-note>
+        <ion-note>
+          This app is designed to simplify the Crown handbook. It shows only the relevant information based on the state of play - Solo or Two Player, the Crown's Climate and the round's phase. In the pop out menu you can set the game's mode (solo or two player), the top of the app allows you to change the crown's climate, and the bottom of the page allows you to navigate through the phases.
+        </ion-note>
 
-          <ion-note>
-            The game state is not saved, so if the page is refreshed, it will reset to default state.
-          </ion-note>
+        <ion-note>
+          The game state is not saved, so if the page is refreshed, it will reset to default state.
+        </ion-note>
 
-          <ion-note>
-            I developed this app as a means of streamlining the Crown for my games, and with many thanks to Wehrlegig games and with their permission, I am happy to make this available, free to the community and everyone else that loves this game. Thank you Wehrlegig!
-          </ion-note>
+        <ion-note>
+          I developed this app as a means of streamlining the Crown for my games, and with many thanks to Wehrlegig games and with their permission, I am happy to make this available, free to the community and everyone else that loves this game. Thank you Wehrlegig!
+        </ion-note>
 
-        </ion-list>
-      </ion-content>
-    </ion-menu>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
-    <ion-router-outlet id="main-content"></ion-router-outlet>
-  </ion-split-pane>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>
