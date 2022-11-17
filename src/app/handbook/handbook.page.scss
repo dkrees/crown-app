@@ -5,3 +5,15 @@ ion-list {
 .indent {
   margin-left: 12px;
 }
+
+ion-item {
+  --padding-start: 36px;
+  --padding-end: 36px;
+  --padding-top: 2px;
+  --padding-bottom: 2px;
+  width: 100%;
+}
+
+.actingPlayer > ion-item::part(native) {
+  background: var(--ion-color-light);
+}

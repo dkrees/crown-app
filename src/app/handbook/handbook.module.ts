@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { HandbookPageRoutingModule } from './handbook-routing.module';
 
 import { HandbookPage } from './handbook.page';
-import { PromiseComponent } from '../promise/promise.component';
 
 @NgModule({
   imports: [
@@ -16,6 +15,6 @@ import { PromiseComponent } from '../promise/promise.component';
     IonicModule,
     HandbookPageRoutingModule,
   ],
-  declarations: [HandbookPage, PromiseComponent]
+  declarations: [HandbookPage]
 })
 export class HandbookPageModule {}

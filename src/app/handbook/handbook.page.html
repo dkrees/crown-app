@@ -49,14 +49,11 @@
 <ion-content [fullscreen]="true">
 
   <div>
-    <!-- <app-standing [companyStanding]="companyStanding" (standingDidChange)="standingChange($event)"></app-standing> -->
-    <!-- <app-climate [climate]="climate" (climateDidChange)="climateChange($event)"></app-climate> -->
-    <!-- <app-phase [phase]="phase" (phaseDidChange)="phaseChange($event)"></app-phase> -->
+    <ng-container *ngFor="let step of crownActions.steps">
+      <!-- <ion-list lines="none"> -->
+        <div *ngIf="(mode === step.mode) || !step.mode" [ngClass]="{'actingPlayer': step.actingPlayer}">
 
-    <ion-list lines="none">
-      <ng-container *ngFor="let step of crownActions.steps">
-        <ng-container *ngIf="(mode === step.mode) || !step.mode">
-          <ion-item *ngIf="step.heading || step.action || step.description || step.note" [color]="step.actingPlayer ? 'light' : ''">
+          <ion-item *ngIf="step.heading || step.action || step.description || step.note" lines="none">
             <ion-label class="ion-text-wrap">
 
                 <h1 *ngIf="step.heading">{{ step.heading | uppercase }}</h1>
@@ -73,7 +70,7 @@
             </ion-label>
           </ion-item>
 
-          <ion-item *ngIf="step.bullets">
+          <ion-item *ngIf="step.bullets" lines="none">
             <ion-label class="ion-text-wrap">
               <ul>
                 <li *ngFor="let bullet of step.bullets">
@@ -83,12 +80,24 @@
             </ion-label>
           </ion-item>
 
-          <app-promise *ngIf="step.promise" [promise]="step.promise"></app-promise>
+          <!-- PROMISE -->
+          <ion-item *ngIf="step.promise" lines="none">
+            <ion-item [color]="step.promise.mandatory ? step.promise.cost ? 'danger' : 'tertiary' : step.promise.cost ? 'warning' : 'success'" lines="none">
+              <ion-icon name="cube-outline" slot="start"></ion-icon>
+              <ion-label class="ion-text-wrap">
+                  <h2>{{ step.promise.cost ? '-' : step.promise.gain ? '+' : '' }}{{ step.promise.cost || step.promise.gain }} Promise Cubes</h2>
+                  <p>{{ step.promise.description }}<br>
+                    <i *ngIf="step.promise.note">{{ step.promise.note }}</i>
+                  </p>
+              </ion-label>
+            </ion-item>
+          </ion-item>
 
-          <ion-list *ngIf="step.climate" lines="full">
+
+          <ng-container *ngIf="step.climate" lines="full">
             <ng-container *ngFor="let crownClimate of step.climate[climate]">
               <ng-container *ngIf="(mode === crownClimate.mode) || !crownClimate.mode">
-                <ion-item *ngIf="crownClimate.description">
+                <ion-item *ngIf="crownClimate.description" lines="none">
                   <ion-label class="ion-text-wrap">
                     <ion-text color="dark">
                       {{ crownClimate.description }}
@@ -98,6 +107,7 @@
                     <ion-text><i>{{ crownClimate.note }}</i></ion-text>
                   </ion-note>
                 </ion-item>
+
                 <ion-item *ngIf="crownClimate.numbered?.length">
                   <ion-label>
                     <ol>
@@ -107,14 +117,36 @@
                     </ol>
                   </ion-label>
                 </ion-item>
-                <app-promise *ngIf="crownClimate.promise" [promise]="crownClimate.promise"></app-promise>
+
+                <!-- CLIMATE PROMISE -->
+                <ion-item *ngIf="crownClimate.promise" lines="none">
+                  <ion-item
+                    [color]="
+                      crownClimate.promise.mandatory ?
+                        crownClimate.promise.cost ?
+                          'danger' :
+                          'tertiary' :
+                        crownClimate.promise.cost ?
+                          'warning' :
+                          'success'
+                      "
+                    lines="none">
+                    <ion-icon name="cube-outline" slot="start"></ion-icon>
+                    <ion-label class="ion-text-wrap">
+                        <h2>{{ crownClimate.promise.cost ? '-' : crownClimate.promise.gain ? '+' : '' }}{{ crownClimate.promise.cost || crownClimate.promise.gain }} Promise Cubes</h2>
+                        <p>{{ crownClimate.promise.description }}<br>
+                          <i *ngIf="crownClimate.promise.note">{{ crownClimate.promise.note }}</i>
+                        </p>
+                    </ion-label>
+                  </ion-item>
+                </ion-item>
+
               </ng-container>
             </ng-container>
-          </ion-list>
-        </ng-container>
-      </ng-container>
-
-    </ion-list>
+          </ng-container>
+        </div>
+      <!-- </ion-list> -->
+    </ng-container>
   </div>
 
 </ion-content>

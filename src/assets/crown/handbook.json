@@ -361,11 +361,13 @@
         "actingPlayer": true
       },
       {
+        "actingPlayer": true,
         "promise": {
           "description": "Consent for Nepotism.",
         "cost": 2}
       },
       {
+        "actingPlayer": true,
         "promise": {
           "description": "Hire a Crown family member over any non-Crown family member.",
           "gain": 1
@@ -868,18 +870,21 @@
         "heading": "If you are Governor General"
       },
       {
+        "actingPlayer": true,
         "promise": {
           "description": "Add money to a Crown office's treasury.",
           "gain": 1
         }
       },
       {
+        "actingPlayer": true,
         "promise": {
           "description": "Place a regiment into an Army associated with a Crown Presidency.",
           "gain": 1
         }
       },
       {
+        "actingPlayer": true,
         "promise": {
           "description": "Place a Company ship into a sea zone associated with a Crown Presidency.",
           "gain": 1
@@ -964,12 +969,14 @@
         "heading": "If you are the Manager of Shipping"
       },
       {
+        "actingPlayer": true,
         "promise": {
           "description": "Fit a Crown ship.",
           "gain": 1
         }
       },
       {
+        "actingPlayer": true,
         "promise": {
           "description": "Place a ship in a Crown Presidency or Crown Superintendent of China.",
           "gain": 1
@@ -1625,6 +1632,7 @@
   "presidents": {
     "steps": [
       {
+        "actingPlayer": true,
         "heading": "If you are President",
         "promise": {
           "description": "Place X Crown writers when filling orders. This always applies, even if you have no choice but to place Crown writers.",
@@ -1685,6 +1693,7 @@
   "china": {
     "steps": [
       {
+        "actingPlayer": true,
         "heading": "If you are Superintendent",
         "description": ["Perform office actions as usual."]
       },
@@ -1844,6 +1853,7 @@
         ]
       },
       {
+        "actingPlayer": true,
         "heading": "If you are Prime Minister",
         "action": "Climate Shift",
         "description": [
