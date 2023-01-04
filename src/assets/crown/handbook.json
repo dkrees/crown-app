@@ -1125,7 +1125,7 @@
       {
         "heading": "If the Crown is Military Affairs",
         "action": "Transfers",
-        "description": ["The Crown will attempt to perform two army transfers. Otherwise, the Crown will transfer according to the Transfer Priority below, skipping any transfer that cannot be completed and any transfer that undoes a previous transfer from this turn."]
+        "description": ["The Crown will attempt to perform two army transfers. The Crown will transfer according to the Transfer Priority below, skipping any transfer that cannot be completed and any transfer that undoes a previous transfer from this turn."]
       },
       {
         "action": "Transfer Priority",
