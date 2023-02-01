@@ -61,8 +61,6 @@ export class HandbookPage implements OnInit {
 
     this.phase = this.roundPhases[this.phaseIndex];
 
-    console.log(this.phase);
-
     this.crownService.getHandbook().subscribe(data => {
       this.handbook = data;
       this.crownTurn();
@@ -119,7 +117,7 @@ export class HandbookPage implements OnInit {
   }
 
   crownTurn() {
-    if (this.handbook) {
+    if (this.handbook && this.phase) {
       this.crownActions = this.handbook[this.phase.value];
     }
   }
