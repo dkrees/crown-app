@@ -89,7 +89,7 @@
     "steps": [
       {
         "heading": "Free Writer Enlistment",
-        "description": ["If there are four or more vacant offices, the Crown will first Enlist Writer as a free action. Then, if there is a Presidential vacancy with no Crown writer, they will use a free action to Enlist Writer in that Presidency."]
+        "description": ["If there are four or more vacant offices: the Crown will first Enlist Writer as a free action, and then if there is a Presidential vacancy with no Crown writer, they will use a free action to Enlist Writer in that Presidency."]
       },
       {
         "mode": "solo",
@@ -106,7 +106,7 @@
         ]
       },
       {
-        "heading": "Extra Action",
+        "heading": "Extra Actions from Passed Laws",
         "description": ["If the most recently passed extra action is an action the Crown chooses to take based on the following chart, the Crown will treat that action as an extra action."]
       },
       {
@@ -172,8 +172,8 @@
         "description": ["The Crown never creates a private firm. They always give consent for dissolution and merging of firms."],
         "promise": {
           "description": "If you form a private firm, you must perform this favor (using as many promise cubes as you have if you have less than 3).",
-          "cost": 3,
-          "mandatory": true
+            "cost": 3,
+            "mandatory": true
         }
       },
       {
@@ -268,7 +268,6 @@
   "hiring": {
     "steps": [
       {
-        "description": ["Once the New Company Shares step is complete (and not before), you may:"],
         "promise": {
           "description": "Give £1 from your family treasury to the Crown if the Crown has a majority of Company shares.",
           "gain": 1
@@ -279,12 +278,12 @@
           "bull": [
             {
               "promise": {
-                "description": "Take a share from the Crown.",
+                "description": "Take a Company Share from the Crown.",
                 "cost": 6}
             },
             {
               "promise": {
-                "description": "Give a share to the Crown.",
+                "description": "Give a Company Share to the Crown.",
                 "gain": 2}
             }
           ],
@@ -342,7 +341,7 @@
         "heading": "Chairman Election",
         "description": ["If the Crown has majority of shares (or an equality and is former Chairman), they will elect themselves as the new Chairman."],
         "promise": {
-          "description": "If the Crown has majority (or an equality and is former Chairman), a player may bribe the Crown to elect them as Chairman. Under Deregulation this becomes -12.",
+          "description": "If the Crown has majority (or is former Chairman), a player may bribe the Crown to elect them as Chairman. Under Deregulation this becomes -12.",
         "cost": 3}
       },
       {
@@ -353,7 +352,7 @@
       },
       {
         "promise": {
-          "description": "A player with majority (or an equality and is former Chairman) votes to elect the Crown as Chairman. Under Deregulation this becomes +6.",
+          "description": "A player with majority (or is former Chairman) votes to elect the Crown as Chairman. Under Deregulation this becomes +6.",
           "gain": 3}
       },
       {
@@ -381,14 +380,14 @@
         "mode": "solo",
         "promise": {
           "description": "You must give consent for nepotism to the Crown when required if they have 2 or more promises. Otherwise, consent is optional.",
-          "gain": 2,
-          "mandatory": true
+            "gain": 2,
+            "mandatory": true
         }
       },
       {
         "mode": "twoPlayer",
         "promise": {
-          "description": "When both players are candidates, each player may perform this favor if they give consent unanimously.",
+          "description": "Give consent for nepotism to the Crown. When both players are candidates, the players may only perform this favor if they give consent unanimously.",
           "gain": 1
         }
       },
@@ -411,9 +410,10 @@
         "actingPlayer": true,
         "heading": "If You Are Chairman",
         "promise": {
-          "description": "You must always perform this favor if able.",
-        "cost": 1,
-        "mandatory": true}
+          "description": "You must always perform this favor if able, just once per turn, and prior to any action being taken.",
+          "cost": 1,
+          "mandatory": true
+        }
       },
       {
         "actingPlayer": true,
@@ -738,7 +738,25 @@
       {
         "heading": "If the Crown is Director of Trade",
         "action": "Special Envoy",
-        "description": ["The Crown will take this action using exactly £3 of available funds with priority going to the northernmost closed order in the first priority region, given by the current AI card, not controlled by the Company. They will skip if £3 is not available, and repeat as long as there is £3+ available."],
+        "climate": {
+          "bull": [
+            {"description": "The Crown will take this action using exactly £3 of available funds with priority going to the northernmost closed order in the first priority region, given by the current AI card, not controlled by the Company. They will skip if £3 is not available, and repeat as long as there is £3+ available."}
+          ],
+          "stag": [
+            {"description": "The Crown will take this action using exactly £3 of available funds with priority going to the northernmost closed order in the first priority region, given by the current AI card, not controlled by the Company. They will skip if £3 is not available, and repeat as long as there is £3+ available."}
+          ],
+          "lion": [
+            {"description": "The Crown will take this action using exactly £3 of available funds with priority going to the northernmost closed order in the first priority region, given by the current AI card, not controlled by the Company. They will skip if £3 is not available, and repeat as long as there is £3+ available."}
+          ],
+          "bear": [
+            {"description": "The Crown will take this action using exactly £4 of available funds with priority going to the northernmost closed order in the first priority region, given by the current AI card, not controlled by the Company. They will skip if £4 is not available, and repeat as long as there is £4+ available."}
+          ],
+          "peacock": [
+            {"description": "The Crown will take this action using exactly £5 of available funds with priority going to the northernmost closed order in the first priority region, given by the current AI card, not controlled by the Company. They will skip if £5 is not available, and repeat as long as there is £5+ available."}
+          ]
+        }
+      },
+      {
         "climate": {
           "bull": [
             {
@@ -795,7 +813,7 @@
         "action": "Transfers",
         "description": [
           "The Crown will make 2 transfers from the priority list.",
-          "If there is more than one viable Presidency to transfer from/to, use AI card's arrows to break ties, determining the location in which the transfer occurs from first.",
+          "If there is a tie in a 'from' Presidency for most/least, consider only presidencies among them that contain at least one ship/writer (whichever the Crown is trying to transfer) as viable, and if there is more than one viable Presidency to transfer from/to, use AI card's arrows to break ties, determining the location in which the transfer occurs from first.",
           "If there is more than one viable ship to transfer, use Company ships, then non-fatigued ships, then Crown ships, then player ships."
         ],
         "note": "E.g. If all three Presidencies are candidates to be transferred from, and all contain 2 ships, then the Presidency with the fewest ships would be the one pointed at by the black arrow on the AI card. If the two ships eligible for transfer are a player ship and a fatigued Crown ship, the Crown would transfer the player ship."
@@ -987,6 +1005,13 @@
         "action": "Fitting Ships",
         "description": ["The Crown will fit as many of their ships as possible, then player ships (use Player Button to break ties.)"],
         "promise": {
+          "description": "If the Crown fits one of your ships; you must always perform this favor if able, and prior to picking the sea zone.",
+            "cost": 1,
+            "mandatory": true
+        }
+      },
+      {
+        "promise": {
           "description": "Fit a specific ship",
           "cost": 1
         }
@@ -1106,7 +1131,7 @@
       },
       {
         "promise": {
-          "description": "The Crown fits one ship into sea zone (or China) of your choice.",
+          "description": "The Crown places the ship into sea zone (or China) of your choice.",
           "cost": 1
         }
       }
@@ -1119,8 +1144,8 @@
         "heading": "If you are Military Affairs",
         "promise": {
           "description": "Assign the Crown as Commander of an Army when able. This always applies, even if you have no choice but to assign the Crown as Commander.",
-          "gain": 1,
-          "mandatory": true}
+            "gain": 1,
+            "mandatory": true}
       },
       {
         "heading": "If the Crown is Military Affairs",
@@ -1241,7 +1266,7 @@
         }
       },
       {
-        "description": ["After all Officers-in-Training have been assigned, the Crown will assign Commanders. If there is more than one eligible officer to become a Commander, Crown will chose their own officer."]
+        "description": ["After all Officers-in-Training have been assigned, the Crown will assign Commanders. If there is more than one eligible officer to become a Commander, Crown will choose their own officer."]
       }
     ]
   },
@@ -1550,7 +1575,7 @@
       },
       {
         "action": "Deploy",
-        "description": ["A Crown Commander will exhaust all available Local Alliances first, then Crown officers, then player officers, and then regiments, in order to match the exact number of dice listed below. They will only Deploy if they can roll the required number of dice given below:"],
+        "description": ["A Crown Commander will exhaust all available Local Alliances first, then Crown officers, then player officers, and then regiments, in order to match the exact number of dice listed below. They will only Deploy if they can roll the required number of dice given below, and will target lower priority regions if necessary, and in priority order, in order to reach this requirement:"],
         "climate": {
           "bull": [
             {"description": "Non-Company Controlled Region: 6 dice"},
@@ -1636,14 +1661,14 @@
         "heading": "If you are President",
         "promise": {
           "description": "Place X Crown writers when filling orders. This always applies, even if you have no choice but to place Crown writers.",
-          "gain": "X",
-          "mandatory": true
+            "gain": "X",
+            "mandatory": true
         }
       },
       {
         "heading": "If the Crown is President",
         "action": "Trade",
-        "description": ["The Crown will spend the necessary funds to roll the required number of dice to trade given below:"],
+        "description": ["The Crown will spend the necessary funds to roll the required number of dice to trade given below. When tied for initiative with a private firm, the Crown will always have the Company trade first."],
         "climate": {
           "bull": [
             {"description": "2 dice"}
@@ -1888,7 +1913,7 @@
         "action": "Policy Marker Movement Priority",
         "description": [
           "Compare the two policy space choices and their net effects.",
-          "For each choice, determine their effect by counting the number of affected Player entities (i.e. workshops, shipyards, shares, luxuries, windows) and compare the total against the number of Crown entities to get the Crown total. Multiply this total by -1 if the choice is tax.",
+          "For each choice, determine their effect by counting the number of affected Player entities (i.e. workshops, shipyards, shares, luxuries, windows) and subtract from the number of Crown entities to get the Crown total. Multiply this total by -1 if the choice is tax.",
           "The Crown will choose the option where the Crown total is highest (e.g. -1 is preferable to -2). Break ties using the AI card clockwise/counterclockwise arrows. If the Crown chooses a Power policy in which the Power marker is already in the highest position, swap the position of the two bottom Power markers."
         ],
         "promise": {
@@ -1911,8 +1936,8 @@
         "mode": "solo",
         "promise": {
           "description": "You have one or more writers in a Crown Presidency, but you do not have at least one writer return from filling an order in that Presidency.",
-          "gain": 1,
-          "mandatory": true
+            "gain": 1,
+            "mandatory": true
         }
       }
     ]

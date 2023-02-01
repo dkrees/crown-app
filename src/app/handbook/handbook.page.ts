@@ -33,7 +33,7 @@ export class HandbookPage implements OnInit {
   handbook;
   companyStanding = 10;
   mode: Mode;
-  climate: Climate;
+  climate: Climate = 'bull';
   phaseIndex = 1;
   phase: {name: string; value: string};
   crownActions: {steps?: any[]; climate?: any} = {};
