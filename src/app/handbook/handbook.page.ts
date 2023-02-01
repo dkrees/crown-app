@@ -55,11 +55,13 @@ export class HandbookPage implements OnInit {
       this.crownService.getSoloMode().subscribe((soloMode: Mode) => {
         console.log('solo mode changed to:', soloMode);
         this.mode = soloMode;
-        this.crownTurn();
+        // this.crownTurn();
       });
     }, 0);
 
     this.phase = this.roundPhases[this.phaseIndex];
+
+    console.log(this.phase);
 
     this.crownService.getHandbook().subscribe(data => {
       this.handbook = data;
@@ -117,7 +119,9 @@ export class HandbookPage implements OnInit {
   }
 
   crownTurn() {
-    this.crownActions = this.handbook[this.phase.value];
+    if (this.handbook) {
+      this.crownActions = this.handbook[this.phase.value];
+    }
   }
 
   async presentActionSheet() {
